@@ -23,6 +23,7 @@
 		1E519814283D0165007C5A10 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1E519813283D0165007C5A10 /* ArgumentParser */; };
 		1E519816283D4E74007C5A10 /* ProjectRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */; };
 		1E519818283D4EBC007C5A10 /* ProjectListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */; };
+		1E51981A283D56ED007C5A10 /* ProjectDetailsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,7 @@
 		1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationErrorResponseModel.swift; sourceTree = "<group>"; };
 		1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRemoteDataSource.swift; sourceTree = "<group>"; };
 		1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListResponseModel.swift; sourceTree = "<group>"; };
+		1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */,
 				1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */,
+				1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */,
 				1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */,
 			);
 			path = "Data Model";
@@ -231,6 +234,7 @@
 				1E519818283D4EBC007C5A10 /* ProjectListResponseModel.swift in Sources */,
 				1E519804283C9BB3007C5A10 /* ApplicationUrls.swift in Sources */,
 				1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */,
+				1E51981A283D56ED007C5A10 /* ProjectDetailsResponseModel.swift in Sources */,
 				1E519816283D4E74007C5A10 /* ProjectRemoteDataSource.swift in Sources */,
 				1E5197F4283A6D94007C5A10 /* OneSkyApiClient.swift in Sources */,
 				1E5197F2283A6D78007C5A10 /* ApiClient.swift in Sources */,

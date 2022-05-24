@@ -20,13 +20,16 @@ class ApplicationUrlConstants {
 class ApplicationUrls {
     public static var basePath: String {
         return "\(ApplicationUrlConstants.urlProtocol)\(ApplicationUrlConstants.domain)"
-        
     }
     
     public static var projectGroupListPath: String = "project-groups"
     
     // TODO: Should I just convert all of these to functions because some require parameters
-    public static func getProjectListPath(forProjectGroup projectGroup: String) -> String {
-        return "\(self.projectGroupListPath)/\(projectGroup)/projects"
+    public static func getProjectListPath(forProjectGroupId projectGroupId: String) -> String {
+        return "\(self.projectGroupListPath)/\(projectGroupId)/projects"
+    }
+    
+    public static func getProjectDetailsPath(forProjectId projectId: String) -> String {
+        return "projects/\(projectId)"
     }
 }

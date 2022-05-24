@@ -14,16 +14,24 @@ func fetchUpdates() async {
     }
     
     let projectListSummaryTask = Task { () -> [ProjectSummaryDataModel] in
-        let projectList = try await ProjectRemoteDataSource.getProjectList(forProjectGroup: "142169")
+        let projectList = try await ProjectRemoteDataSource.getProjectList(forProjectGroupId: "142169")
         return projectList
+    }
+    
+    let projectDetailsTask = Task { () -> ProjectDetailsDataModel in
+        let projectDetails = try await ProjectRemoteDataSource.getProjectDetails(forProjectId: "314511")
+        return projectDetails
     }
     
     do {
         async let projectGroupList = projectGroupSummaryTask.value
         async let projectList = projectListSummaryTask.value
+        async let projectDetails = projectDetailsTask.value
         
         print("Project group list: \(try await projectGroupList)")
         print("Project list: \(try await projectList)")
+        print("Project details: \(try await projectDetails)")
+        
     } catch let error as APIError {
         print("API error: \(error.getApiErrorMessage())")
     } catch {
