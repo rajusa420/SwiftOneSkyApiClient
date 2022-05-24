@@ -24,4 +24,9 @@ class ApplicationUrls {
     }
     
     public static var projectGroupListPath: String = "project-groups"
+    
+    // TODO: Should I just convert all of these to functions because some require parameters
+    public static func getProjectListPath(forProjectGroup projectGroup: String) -> String {
+        return "\(self.projectGroupListPath)/\(projectGroup)/projects"
+    }
 }

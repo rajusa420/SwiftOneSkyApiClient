@@ -48,7 +48,6 @@ class ApiClient {
         let data = try await executeRequest(request)
         let decodedData: ResponseBodyType = try await decodeResponse(data: data)
         return decodedData
-
     }
     
     func post<RequestBodyType: Codable, ResponseBodyType: Decodable>(_ path: String, body: RequestBodyType?, queryItems: [URLQueryItem]?) async throws -> ResponseBodyType {

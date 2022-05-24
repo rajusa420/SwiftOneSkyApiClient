@@ -19,8 +19,10 @@
 		1E519804283C9BB3007C5A10 /* ApplicationUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519803283C9BB3007C5A10 /* ApplicationUrls.swift */; };
 		1E519806283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */; };
 		1E519809283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */; };
-		1E51980F283CC16B007C5A10 /* CommandLineKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E51980E283CC16B007C5A10 /* CommandLineKit */; };
 		1E519811283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */; };
+		1E519814283D0165007C5A10 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1E519813283D0165007C5A10 /* ArgumentParser */; };
+		1E519816283D4E74007C5A10 /* ProjectRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */; };
+		1E519818283D4EBC007C5A10 /* ProjectListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +53,8 @@
 		1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupRemoteDataSource.swift; sourceTree = "<group>"; };
 		1E51980A283CBBCA007C5A10 /* apikeys.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = apikeys.plist; sourceTree = "<group>"; };
 		1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationErrorResponseModel.swift; sourceTree = "<group>"; };
+		1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRemoteDataSource.swift; sourceTree = "<group>"; };
+		1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E51980F283CC16B007C5A10 /* CommandLineKit in Frameworks */,
+				1E519814283D0165007C5A10 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */,
+				1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */,
 				1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */,
 			);
 			path = "Data Model";
@@ -146,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */,
+				1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */,
 			);
 			path = "Remote Data Sources";
 			sourceTree = "<group>";
@@ -167,7 +173,7 @@
 			);
 			name = OneSkyApiClient;
 			packageProductDependencies = (
-				1E51980E283CC16B007C5A10 /* CommandLineKit */,
+				1E519813283D0165007C5A10 /* ArgumentParser */,
 			);
 			productName = OneSkyApiClient;
 			productReference = 1E5197DD283551AD007C5A10 /* OneSkyApiClient */;
@@ -198,7 +204,7 @@
 			);
 			mainGroup = 1E5197D4283551AD007C5A10;
 			packageReferences = (
-				1E51980D283CC16B007C5A10 /* XCRemoteSwiftPackageReference "swift-commandlinekit" */,
+				1E519812283D0165007C5A10 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
 			productRefGroup = 1E5197DE283551AD007C5A10 /* Products */;
 			projectDirPath = "";
@@ -222,8 +228,10 @@
 				1E5197EB28355638007C5A10 /* ApiError.swift in Sources */,
 				1E519806283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */,
 				1E519801283C0F81007C5A10 /* OneSkyApiService.swift in Sources */,
+				1E519818283D4EBC007C5A10 /* ProjectListResponseModel.swift in Sources */,
 				1E519804283C9BB3007C5A10 /* ApplicationUrls.swift in Sources */,
 				1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */,
+				1E519816283D4E74007C5A10 /* ProjectRemoteDataSource.swift in Sources */,
 				1E5197F4283A6D94007C5A10 /* OneSkyApiClient.swift in Sources */,
 				1E5197F2283A6D78007C5A10 /* ApiClient.swift in Sources */,
 				1E5197FB283A75EB007C5A10 /* MD5Helper.swift in Sources */,
@@ -392,21 +400,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1E51980D283CC16B007C5A10 /* XCRemoteSwiftPackageReference "swift-commandlinekit" */ = {
+		1E519812283D0165007C5A10 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/objecthub/swift-commandlinekit";
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.3.4;
+				minimumVersion = 1.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1E51980E283CC16B007C5A10 /* CommandLineKit */ = {
+		1E519813283D0165007C5A10 /* ArgumentParser */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1E51980D283CC16B007C5A10 /* XCRemoteSwiftPackageReference "swift-commandlinekit" */;
-			productName = CommandLineKit;
+			package = 1E519812283D0165007C5A10 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

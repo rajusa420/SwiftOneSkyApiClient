@@ -8,15 +8,22 @@
 import Foundation
 
 func fetchUpdates() async {
-    let testTask = Task { () -> [ProjectGroupSummaryDataModel] in
+    let projectGroupSummaryTask = Task { () -> [ProjectGroupSummaryDataModel] in
         let projectGroupList = try await ProjectGroupRemoteDataSource.getProjectGroupList()
         return projectGroupList
     }
     
+    let projectListSummaryTask = Task { () -> [ProjectSummaryDataModel] in
+        let projectList = try await ProjectRemoteDataSource.getProjectList(forProjectGroup: "142169")
+        return projectList
+    }
+    
     do {
-        let projectGroupList = try await testTask.value
-        print("Project group list: \(projectGroupList)")
-        print("Complete")
+        async let projectGroupList = projectGroupSummaryTask.value
+        async let projectList = projectListSummaryTask.value
+        
+        print("Project group list: \(try await projectGroupList)")
+        print("Project list: \(try await projectList)")
     } catch let error as APIError {
         print("API error: \(error.getApiErrorMessage())")
     } catch {
