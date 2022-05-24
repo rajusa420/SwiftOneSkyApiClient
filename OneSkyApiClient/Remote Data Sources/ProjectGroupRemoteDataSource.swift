@@ -8,7 +8,7 @@
 import Foundation
 
 class ProjectGroupRemoteDataSource {
-    public static func getProjectGroupList() async throws -> ProjectGroupListDataModel {
+    public static func getProjectGroupList() async throws -> [ProjectGroupSummaryDataModel] {
         let response: ProjectGroupListResponseModel = try await OneSkyApiService.instance.apiClient.get(ApplicationUrls.projectGroupListPath)
         return response.data
     }

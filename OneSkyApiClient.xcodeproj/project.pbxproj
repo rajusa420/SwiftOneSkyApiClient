@@ -19,17 +19,18 @@
 		1E519804283C9BB3007C5A10 /* ApplicationUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519803283C9BB3007C5A10 /* ApplicationUrls.swift */; };
 		1E519806283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */; };
 		1E519809283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */; };
+		1E51980F283CC16B007C5A10 /* CommandLineKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E51980E283CC16B007C5A10 /* CommandLineKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1E5197DB283551AD007C5A10 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
+			buildActionMask = 12;
+			dstPath = usr/share/man/man1;
 			dstSubfolderSpec = 0;
 			files = (
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -47,6 +48,7 @@
 		1E519803283C9BB3007C5A10 /* ApplicationUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUrls.swift; sourceTree = "<group>"; };
 		1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupListResponseModel.swift; sourceTree = "<group>"; };
 		1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupRemoteDataSource.swift; sourceTree = "<group>"; };
+		1E51980A283CBBCA007C5A10 /* apikeys.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = apikeys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E51980F283CC16B007C5A10 /* CommandLineKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		1E5197D4283551AD007C5A10 = {
 			isa = PBXGroup;
 			children = (
+				1E51980A283CBBCA007C5A10 /* apikeys.plist */,
 				1E5197DF283551AD007C5A10 /* OneSkyApiClient */,
 				1E5197DE283551AD007C5A10 /* Products */,
 			);
@@ -159,6 +163,9 @@
 			dependencies = (
 			);
 			name = OneSkyApiClient;
+			packageProductDependencies = (
+				1E51980E283CC16B007C5A10 /* CommandLineKit */,
+			);
 			productName = OneSkyApiClient;
 			productReference = 1E5197DD283551AD007C5A10 /* OneSkyApiClient */;
 			productType = "com.apple.product-type.tool";
@@ -187,6 +194,9 @@
 				Base,
 			);
 			mainGroup = 1E5197D4283551AD007C5A10;
+			packageReferences = (
+				1E51980D283CC16B007C5A10 /* XCRemoteSwiftPackageReference "swift-commandlinekit" */,
+			);
 			productRefGroup = 1E5197DE283551AD007C5A10 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -376,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E51980D283CC16B007C5A10 /* XCRemoteSwiftPackageReference "swift-commandlinekit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objecthub/swift-commandlinekit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E51980E283CC16B007C5A10 /* CommandLineKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E51980D283CC16B007C5A10 /* XCRemoteSwiftPackageReference "swift-commandlinekit" */;
+			productName = CommandLineKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E5197D5283551AD007C5A10 /* Project object */;
 }

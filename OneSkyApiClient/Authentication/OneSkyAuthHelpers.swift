@@ -31,7 +31,7 @@ class OneSkyAuthHelpers {
     static func getTimeStampAndDevHash() -> (String, String) {
         let apiSecret = Self.getApiSecret()
         let unixTimeStamp = String(Self.getUnixTimeStampInSeconds())
-        let devHashString = apiSecret + unixTimeStamp
+        let devHashString = unixTimeStamp + apiSecret
         return (unixTimeStamp, MD5Helper.MD5(string: devHashString))
     }
 }

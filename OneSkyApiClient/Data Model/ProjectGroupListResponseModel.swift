@@ -11,24 +11,20 @@ struct ProjectGroupListResponseMetaModel: Codable {
     let status: Int
     let record_count: Int
     let page_count: Int
-    let next_page: String
-    let prev_page: String
-    let first_page: String
-    let last_page: String
+    let next_page: String?
+    let prev_page: String?
+    let first_page: String?
+    let last_page: String?
 }
 
 struct ProjectGroupSummaryDataModel: Codable {
-    let id: Int
+    let id: String
     let name: String
-}
-
-struct ProjectGroupListDataModel: Codable {
-    let data: [ProjectGroupSummaryDataModel]
 }
 
 struct ProjectGroupListResponseModel: Codable {
     let meta: ProjectGroupListResponseMetaModel
-    let data: ProjectGroupListDataModel
+    let data: [ProjectGroupSummaryDataModel]
     
     var status: Int {
         meta.status

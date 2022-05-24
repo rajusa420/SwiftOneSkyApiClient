@@ -36,7 +36,7 @@ class ApiClient {
     }
     
     func get<ResponseBodyType: Decodable>(_ path: String, queryItems: [URLQueryItem]? = nil) async throws -> ResponseBodyType {
-        let request = try await buildRequest(path, .get)
+        let request = try await buildRequest(path, .get, queryItems: queryItems)
         let data = try await executeRequest(request)
         let decodedData: ResponseBodyType = try await decodeResponse(data: data)
         return decodedData
@@ -104,6 +104,7 @@ class ApiClient {
     }
     
     private func executeRequest(_ urlRequest: URLRequest) async throws -> Data {
+        print("Execute Request: \(urlRequest.url?.absoluteString ?? "n/a")")
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         
         guard let httpResponse = response as? HTTPURLResponse else {

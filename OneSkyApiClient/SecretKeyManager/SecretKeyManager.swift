@@ -21,8 +21,7 @@ class SecretKeysManager {
     }
     
     private func loadSecretsPlist() {
-        guard case let frameworkBundle = Bundle(for: SecretKeysManager.self),
-              let secretKeysPath = frameworkBundle.path(forResource: "apikeys", ofType: "plist"),
+        guard case let secretKeysPath = "/Users/rajusa/Rajusa/OneSkyApiClient/apikeys.plist",
               let loadedSecretsDictionary = NSDictionary(contentsOfFile: secretKeysPath) else {
             fatalError("Unable to load api keys plist! Please ensure you have created an apikeys.plist file in the root of the project that contains the one sky api client key")
         }
