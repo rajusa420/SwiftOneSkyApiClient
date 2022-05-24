@@ -87,7 +87,7 @@ class ApiClient {
         return encodedData
     }
     
-    private func decodeResponse<ResponseType: Decodable>(data: Data) async throws -> ResponseType {
+    func decodeResponse<ResponseType: Decodable>(data: Data) async throws -> ResponseType {
         let response: ResponseType = try await withCheckedThrowingContinuation { continuation in
             do {
                 let jsonDecoder = JSONDecoder()
@@ -103,14 +103,7 @@ class ApiClient {
         return response
     }
     
-    private func executeRequest(_ urlRequest: URLRequest) async throws -> Data {
-        print("Execute Request: \(urlRequest.url?.absoluteString ?? "n/a")")
-        let (data, response) = try await URLSession.shared.data(for: urlRequest)
-        
-        guard let httpResponse = response as? HTTPURLResponse else {
-            throw APIError.generic(message: "Invalid response received for API Request")
-        }
-        
+    func handleResponse(data: Data, httpResponse: HTTPURLResponse) async throws -> Data {
         switch httpResponse.statusCode {
             case 200..<300:
                 return data
@@ -124,6 +117,17 @@ class ApiClient {
             default:
                 throw APIError.generic(message: "Request failed (code: \(httpResponse.statusCode)). \(httpResponse.description)")
         }
+    }
+    
+    private func executeRequest(_ urlRequest: URLRequest) async throws -> Data {
+        print("Execute Request: \(urlRequest.url?.absoluteString ?? "n/a")")
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw APIError.generic(message: "Invalid response received for API Request")
+        }
+        
+        return try await handleResponse(data: data, httpResponse: httpResponse)
     }
 }
 

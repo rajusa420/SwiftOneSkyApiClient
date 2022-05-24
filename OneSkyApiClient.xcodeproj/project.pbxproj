@@ -20,6 +20,7 @@
 		1E519806283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */; };
 		1E519809283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */; };
 		1E51980F283CC16B007C5A10 /* CommandLineKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1E51980E283CC16B007C5A10 /* CommandLineKit */; };
+		1E519811283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 		1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupListResponseModel.swift; sourceTree = "<group>"; };
 		1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupRemoteDataSource.swift; sourceTree = "<group>"; };
 		1E51980A283CBBCA007C5A10 /* apikeys.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = apikeys.plist; sourceTree = "<group>"; };
+		1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationErrorResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */,
+				1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				1E519809283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */,
 				1E5197FF283C0C46007C5A10 /* OneSkyAuthHelpers.swift in Sources */,
+				1E519811283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */,
 				1E5197E928355481007C5A10 /* ApiRequestBuilder.swift in Sources */,
 				1E5197E1283551AD007C5A10 /* main.swift in Sources */,
 				1E5197EB28355638007C5A10 /* ApiError.swift in Sources */,

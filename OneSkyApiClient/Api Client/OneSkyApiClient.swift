@@ -39,4 +39,21 @@ class OneSkyApiClient: ApiClient {
     override func delete<ResponseBodyType: Decodable>(_ path: String, queryItems: [URLQueryItem]?) async throws -> ResponseBodyType {
         return try await super.delete(path, queryItems: addAuthQueryParams(to: queryItems))
     }
+    
+    override func handleResponse(data: Data, httpResponse: HTTPURLResponse) async throws -> Data {
+        switch httpResponse.statusCode {
+            case 200..<300:
+                return data
+    
+            case 401:
+                let authErrorResponse: AuthorizationErrorResponseModel = try await decodeResponse(data: data)
+            throw APIError.needsAuthentication(message: "User requires authentication: \(authErrorResponse.message)")
+            
+            case 403:
+            throw APIError.unauthorized(message: "User not authorized for this request: \(httpResponse.statusCode)")
+            
+            default:
+                throw APIError.generic(message: "Request failed (code: \(httpResponse.statusCode)). \(httpResponse.description)")
+        }
+    }
 }
