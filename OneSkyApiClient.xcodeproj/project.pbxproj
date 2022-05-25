@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E5197E1283551AD007C5A10 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E0283551AD007C5A10 /* main.swift */; };
+		1E5197E1283551AD007C5A10 /* CommandLineInterfaceMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */; };
 		1E5197E928355481007C5A10 /* ApiRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */; };
 		1E5197EB28355638007C5A10 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EA28355638007C5A10 /* ApiError.swift */; };
 		1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EE283A6976007C5A10 /* SecretKeyManager.swift */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		1E5197DD283551AD007C5A10 /* OneSkyApiClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OneSkyApiClient; sourceTree = BUILT_PRODUCTS_DIR; };
-		1E5197E0283551AD007C5A10 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineInterfaceMain.swift; sourceTree = "<group>"; };
 		1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBuilder.swift; sourceTree = "<group>"; };
 		1E5197EA28355638007C5A10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		1E5197EE283A6976007C5A10 /* SecretKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretKeyManager.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 				1E519807283CA227007C5A10 /* Remote Data Sources */,
 				1E5197E728355466007C5A10 /* Api Client */,
 				1E5197ED283A6941007C5A10 /* SecretKeyManager */,
-				1E5197E0283551AD007C5A10 /* main.swift */,
+				1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */,
 			);
 			path = OneSkyApiClient;
 			sourceTree = "<group>";
@@ -227,7 +227,7 @@
 				1E5197FF283C0C46007C5A10 /* OneSkyAuthHelpers.swift in Sources */,
 				1E519811283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */,
 				1E5197E928355481007C5A10 /* ApiRequestBuilder.swift in Sources */,
-				1E5197E1283551AD007C5A10 /* main.swift in Sources */,
+				1E5197E1283551AD007C5A10 /* CommandLineInterfaceMain.swift in Sources */,
 				1E5197EB28355638007C5A10 /* ApiError.swift in Sources */,
 				1E519806283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */,
 				1E519801283C0F81007C5A10 /* OneSkyApiService.swift in Sources */,

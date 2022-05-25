@@ -40,11 +40,12 @@ func fetchUpdates() async {
 
 }
 
-Task {
-    await fetchUpdates()
+@main
+struct CommandLineInterface {
+    static func main() async throws {
+        await fetchUpdates()
+    }
 }
-
-RunLoop.main.run()
 
 
 
