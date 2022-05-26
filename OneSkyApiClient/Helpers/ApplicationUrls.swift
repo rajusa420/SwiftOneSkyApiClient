@@ -32,4 +32,8 @@ class ApplicationUrls {
     public static func getProjectDetailsPath(forProjectId projectId: String) -> String {
         return "projects/\(projectId)"
     }
+    
+    public static func getProjectLanguagesPath(forProjectId projectId: String) -> String {
+        return "projects/\(projectId)/languages"
+    }
 }

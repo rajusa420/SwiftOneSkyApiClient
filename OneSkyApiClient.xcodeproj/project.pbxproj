@@ -24,6 +24,7 @@
 		1E519816283D4E74007C5A10 /* ProjectRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */; };
 		1E519818283D4EBC007C5A10 /* ProjectListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */; };
 		1E51981A283D56ED007C5A10 /* ProjectDetailsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */; };
+		1E51981C283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -57,6 +58,7 @@
 		1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRemoteDataSource.swift; sourceTree = "<group>"; };
 		1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListResponseModel.swift; sourceTree = "<group>"; };
 		1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsResponseModel.swift; sourceTree = "<group>"; };
+		1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLanguagesResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */,
 				1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */,
 				1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */,
+				1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */,
 				1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */,
 			);
 			path = "Data Model";
@@ -227,6 +230,7 @@
 				1E5197FF283C0C46007C5A10 /* OneSkyAuthHelpers.swift in Sources */,
 				1E519811283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */,
 				1E5197E928355481007C5A10 /* ApiRequestBuilder.swift in Sources */,
+				1E51981C283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */,
 				1E5197E1283551AD007C5A10 /* CommandLineInterfaceMain.swift in Sources */,
 				1E5197EB28355638007C5A10 /* ApiError.swift in Sources */,
 				1E519806283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */,
