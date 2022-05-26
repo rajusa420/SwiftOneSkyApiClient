@@ -7,11 +7,6 @@
 
 import Foundation
 
-struct AuthorizationErrorMetaModel: Codable {
-    let status: Int
-    let message: String?
-}
-
 struct AuthorizationErrorDataModel: Codable {
     let data: [String: String]?
 }

@@ -1,16 +1,11 @@
 //
-//  ProjectLanguagesResponseModel.swift
+//  ProjectLanguageDataModel.swift
 //  OneSkyApiClient
 //
-//  Created by Raj Sathianarayanan on 5/25/22.
+//  Created by Raj Sathianarayanan on 5/26/22.
 //
 
 import Foundation
-
-struct ProjectLanguagesResponseMetaModel: Codable {
-    let status: Int
-    let record_count: Int
-}
 
 struct ProjectLanguageDataModel: Codable {
     let code: String
@@ -23,9 +18,4 @@ struct ProjectLanguageDataModel: Codable {
     let translation_progress: String
     let last_updated_at: String
     let last_updated_at_timestamp: Int
-}
-
-struct ProjectLanguagesResponseModel: Codable {
-    let meta: ProjectLanguagesResponseMetaModel
-    let data: [ProjectLanguageDataModel]
 }
