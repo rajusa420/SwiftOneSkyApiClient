@@ -23,14 +23,21 @@ func fetchUpdates() async {
         return projectLanguages
     }
     
+    let projectUploadedFilesTask = Task { () -> [ProjectFileDataModel] in
+        let projectFiles = try await ProjectFileRemoteDataSource.getUploadedFileList(forProjectId: "314511")
+        return projectFiles
+    }
+    
     do {
         async let projectList = projectListSummaryTask.value
         async let projectDetails = projectDetailsTask.value
         async let projectLanguages = projectLanguagesTask.value
+        async let projectUploadedFiles = projectUploadedFilesTask.value
         
         print("Project list: \(try await projectList)")
         print("Project details: \(try await projectDetails)")
         print("Project languages: \(try await projectLanguages)")
+        print("Project uploaded Files: \(try await projectUploadedFiles)")
         
     } catch let error as APIError {
         print("API error: \(error.getApiErrorMessage())")

@@ -25,6 +25,8 @@
 		1E519818283D4EBC007C5A10 /* ProjectListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */; };
 		1E51981A283D56ED007C5A10 /* ProjectDetailsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */; };
 		1E51981C283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */; };
+		1E51981E283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981D283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift */; };
+		1E519820283FBAF6007C5A10 /* ProjectFileListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +61,8 @@
 		1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListResponseModel.swift; sourceTree = "<group>"; };
 		1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsResponseModel.swift; sourceTree = "<group>"; };
 		1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLanguagesResponseModel.swift; sourceTree = "<group>"; };
+		1E51981D283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileRemoteDataSource.swift; sourceTree = "<group>"; };
+		1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileListResponseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,7 @@
 				1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */,
 				1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */,
 				1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */,
+				1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */,
 				1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */,
 				1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */,
 			);
@@ -158,6 +163,7 @@
 			children = (
 				1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */,
 				1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */,
+				1E51981D283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift */,
 			);
 			path = "Remote Data Sources";
 			sourceTree = "<group>";
@@ -237,11 +243,13 @@
 				1E519801283C0F81007C5A10 /* OneSkyApiService.swift in Sources */,
 				1E519818283D4EBC007C5A10 /* ProjectListResponseModel.swift in Sources */,
 				1E519804283C9BB3007C5A10 /* ApplicationUrls.swift in Sources */,
+				1E519820283FBAF6007C5A10 /* ProjectFileListResponseModel.swift in Sources */,
 				1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */,
 				1E51981A283D56ED007C5A10 /* ProjectDetailsResponseModel.swift in Sources */,
 				1E519816283D4E74007C5A10 /* ProjectRemoteDataSource.swift in Sources */,
 				1E5197F4283A6D94007C5A10 /* OneSkyApiClient.swift in Sources */,
 				1E5197F2283A6D78007C5A10 /* ApiClient.swift in Sources */,
+				1E51981E283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift in Sources */,
 				1E5197FB283A75EB007C5A10 /* MD5Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
