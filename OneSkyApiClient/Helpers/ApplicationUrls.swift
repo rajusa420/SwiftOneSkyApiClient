@@ -40,4 +40,8 @@ class ApplicationUrls {
     public static func getProjectFileListPath(forProjectId projectId: String) -> String {
         return "projects/\(projectId)/files"
     }
+    
+    public static func getLocaleListPath() -> String {
+        return "locales"
+    }
 }
