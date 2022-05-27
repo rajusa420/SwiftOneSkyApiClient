@@ -10,27 +10,15 @@ import Foundation
 class ApiClient {
     var baseURL: String
     
-    var headerContentType: String {
-        get {
-            "application/json"
-        }
-    }
-    
-    var headerAcceptType: String {
-        get {
-            "application/json"
-        }
-    }
-    
     init(baseURL: String) {
         self.baseURL = baseURL
     }
     
-    func buildRequest(_ path: String, _ requestMethod: APIRequestMethod, body: Data? = nil, queryItems: [URLQueryItem]? = nil) async throws -> URLRequest {
+    func buildRequest(_ path: String, _ requestMethod: APIRequestMethod, body: Data? = nil, queryItems: [URLQueryItem]? = nil, contentType: ContentType = .applicationJson) async throws -> URLRequest {
         try await APIRequestBuilder(method: requestMethod, baseUrl: self.baseURL, path: path)
             .addQueryParams(queryItems)
-            .addHeaderField(.contentType, value: self.headerContentType)
-            .addHeaderField(.acceptType, value: self.headerAcceptType)
+            .addHeaderField(.contentType, contentType: contentType)
+            .addHeaderField(.acceptType, contentType: .applicationJson)
             .addBody(body)
             .build()
     }
@@ -50,9 +38,9 @@ class ApiClient {
         return decodedData
     }
     
-    func post<RequestBodyType: Codable, ResponseBodyType: Decodable>(_ path: String, body: RequestBodyType?, queryItems: [URLQueryItem]?) async throws -> ResponseBodyType {
+    func post<RequestBodyType: Codable, ResponseBodyType: Decodable>(_ path: String, body: RequestBodyType?, queryItems: [URLQueryItem]?, contentType: ContentType = .applicationJson) async throws -> ResponseBodyType {
         let encodedBody = try await encodeBody(body)
-        let request = try await buildRequest(path, .post, body: encodedBody, queryItems: queryItems)
+        let request = try await buildRequest(path, .post, body: encodedBody, queryItems: queryItems, contentType: contentType)
         let data = try await executeRequest(request)
         let decodedData: ResponseBodyType = try await decodeResponse(data: data)
         return decodedData

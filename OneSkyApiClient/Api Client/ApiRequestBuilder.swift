@@ -14,6 +14,11 @@ public enum APIHeaderField: String {
     case authorization = "Authorization"
 }
 
+public enum ContentType: String {
+    case applicationJson = "application/json"
+    case multipartFormData = "multipart/form-data"
+}
+
 extension URLRequest {
     public mutating func setValue(_ value: String?, forHTTPHeaderField field: APIHeaderField) {
         setValue(value, forHTTPHeaderField: field.rawValue)
@@ -72,6 +77,11 @@ class APIRequestBuilder {
     
     func addHeaderField(_ apiHeaderField: APIHeaderField, value: String) -> APIRequestBuilder {
         headerFields[apiHeaderField] = value
+        return self
+    }
+    
+    func addHeaderField(_ apiHeaderField: APIHeaderField, contentType: ContentType) -> APIRequestBuilder {
+        headerFields[apiHeaderField] = contentType.rawValue
         return self
     }
     
