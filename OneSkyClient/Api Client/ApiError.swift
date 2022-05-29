@@ -27,7 +27,7 @@ public enum APIError: Error {
     case badRequest(message: String)
     case requestComponentsParseError(message: String)
     
-    func getApiErrorMessage() -> String {
+    public func getApiErrorMessage() -> String {
         switch self {
         case .invalidBaseUrl(let message):
             return "Invalid Base Url: \(message)"

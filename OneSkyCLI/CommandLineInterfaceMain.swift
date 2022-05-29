@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import OneSkyClient
 
 func fetchUpdates() async {
     let projectListSummaryTask = Task { () -> [ProjectSummaryDataModel] in
@@ -41,6 +42,10 @@ func fetchUpdates() async {
 @main
 struct CommandLineInterface {
     static func main() async throws {
+        OneSkyClient.instance.initialize(
+            apiKey: OneSkySecretKeyHelper.getApiKey(),
+            apiSecret: OneSkySecretKeyHelper.getApiSecret()
+        )
         await fetchUpdates()
     }
 }

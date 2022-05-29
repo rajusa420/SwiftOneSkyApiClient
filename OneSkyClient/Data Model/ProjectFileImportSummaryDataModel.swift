@@ -29,7 +29,7 @@ import Foundation
 //    }
 //}
 
-struct ProjectFileImportSummaryDataModel: Codable {
+public struct ProjectFileImportSummaryDataModel: Codable {
     let id: Int
     let created_at: String
     let created_at_timestamp: Int

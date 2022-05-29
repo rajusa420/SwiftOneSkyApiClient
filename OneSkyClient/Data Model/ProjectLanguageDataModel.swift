@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProjectLanguageDataModel: Codable {
+public struct ProjectLanguageDataModel: Codable {
     let code: String
     let english_name: String
     let local_name: String

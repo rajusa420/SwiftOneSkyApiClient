@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ProjectFileFormat: String {
+public enum ProjectFileFormat: String {
     case iOSStrings = "IOS_STRINGS"
     case iOSStringsDict = "IOS_STRINGSDICT_XML"
     case androidXml = "ANDROID_XML"

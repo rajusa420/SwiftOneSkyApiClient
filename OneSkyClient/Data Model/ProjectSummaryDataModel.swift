@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProjectSummaryDataModel: Codable {
+public struct ProjectSummaryDataModel: Codable {
     let id: Int
     let name: String?
 }

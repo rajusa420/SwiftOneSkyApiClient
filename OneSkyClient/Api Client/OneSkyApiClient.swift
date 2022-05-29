@@ -16,9 +16,9 @@ class OneSkyApiClient: ApiClient {
     
     private func addAuthQueryParams(to queryItems: [URLQueryItem]?) -> [URLQueryItem] {
         var queryItems = queryItems ?? []
-        queryItems.append(URLQueryItem(name: AuthQueryItemName.apiKey.rawValue, value: OneSkyAuthHelpers.getApiKey()))
+        queryItems.append(URLQueryItem(name: AuthQueryItemName.apiKey.rawValue, value: OneSkyClient.instance.getApiKey()))
         
-        let (timeStamp, devHash) = OneSkyAuthHelpers.getTimeStampAndDevHash()
+        let (timeStamp, devHash) = OneSkyAuthHelpers.getTimeStampAndDevHash(apiSecret: OneSkyClient.instance.getApiSecret())
         queryItems.append(URLQueryItem(name: AuthQueryItemName.timeStamp.rawValue, value: timeStamp))
         queryItems.append(URLQueryItem(name: AuthQueryItemName.devHash.rawValue, value: devHash))
         return queryItems

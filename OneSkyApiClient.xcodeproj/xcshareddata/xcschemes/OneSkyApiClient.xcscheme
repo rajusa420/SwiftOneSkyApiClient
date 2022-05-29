@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1E5197DC283551AD007C5A10"
-               BuildableName = "OneSkyApiClient"
-               BlueprintName = "OneSkyApiClient"
+               BuildableName = "OneSkyCLI"
+               BlueprintName = "OneSkyCLI"
                ReferencedContainer = "container:OneSkyApiClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,8 +46,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E5197DC283551AD007C5A10"
-            BuildableName = "OneSkyApiClient"
-            BlueprintName = "OneSkyApiClient"
+            BuildableName = "OneSkyCLI"
+            BlueprintName = "OneSkyCLI"
             ReferencedContainer = "container:OneSkyApiClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -70,8 +70,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1E5197DC283551AD007C5A10"
-            BuildableName = "OneSkyApiClient"
-            BlueprintName = "OneSkyApiClient"
+            BuildableName = "OneSkyCLI"
+            BlueprintName = "OneSkyCLI"
             ReferencedContainer = "container:OneSkyApiClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -7,44 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E1E9CCC2843FB8A002E0E87 /* OneSkyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CCB2843FB8A002E0E87 /* OneSkyClient.swift */; };
+		1E1E9CCE2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CCD2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift */; };
 		1E5197E1283551AD007C5A10 /* CommandLineInterfaceMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */; };
-		1E5197E928355481007C5A10 /* ApiRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */; };
-		1E5197EB28355638007C5A10 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EA28355638007C5A10 /* ApiError.swift */; };
 		1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EE283A6976007C5A10 /* SecretKeyManager.swift */; };
-		1E5197F2283A6D78007C5A10 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197F1283A6D78007C5A10 /* ApiClient.swift */; };
-		1E5197F4283A6D94007C5A10 /* OneSkyApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197F3283A6D94007C5A10 /* OneSkyApiClient.swift */; };
-		1E5197FB283A75EB007C5A10 /* MD5Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197FA283A75EB007C5A10 /* MD5Helper.swift */; };
-		1E5197FF283C0C46007C5A10 /* OneSkyAuthHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197FE283C0C46007C5A10 /* OneSkyAuthHelpers.swift */; };
-		1E519801283C0F81007C5A10 /* OneSkyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519800283C0F81007C5A10 /* OneSkyApiService.swift */; };
-		1E519804283C9BB3007C5A10 /* ApplicationUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519803283C9BB3007C5A10 /* ApplicationUrls.swift */; };
-		1E519806283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */; };
-		1E519809283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */; };
-		1E519811283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */; };
-		1E519814283D0165007C5A10 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1E519813283D0165007C5A10 /* ArgumentParser */; };
-		1E519816283D4E74007C5A10 /* ProjectRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */; };
-		1E519818283D4EBC007C5A10 /* ProjectListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */; };
-		1E51981A283D56ED007C5A10 /* ProjectDetailsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */; };
-		1E51981C283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */; };
-		1E51981E283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981D283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift */; };
-		1E519820283FBAF6007C5A10 /* ProjectFileListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */; };
-		1E519824283FDCDA007C5A10 /* ProjectGroupSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519823283FDCDA007C5A10 /* ProjectGroupSummaryDataModel.swift */; };
-		1E519826283FDD0F007C5A10 /* ProjectSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519825283FDD0F007C5A10 /* ProjectSummaryDataModel.swift */; };
-		1E519828283FDD5B007C5A10 /* ProjectDetailsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519827283FDD5B007C5A10 /* ProjectDetailsDataModel.swift */; };
-		1E51982A283FDDB7007C5A10 /* ProjectFileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519829283FDDB7007C5A10 /* ProjectFileDataModel.swift */; };
-		1E51982C283FDDEE007C5A10 /* ProjectLanguageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51982B283FDDEE007C5A10 /* ProjectLanguageDataModel.swift */; };
-		1E51982E283FDEEC007C5A10 /* AuthorizationErrorMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51982D283FDEEC007C5A10 /* AuthorizationErrorMetaModel.swift */; };
-		1E519830283FDF2D007C5A10 /* ProjectGroupListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51982F283FDF2D007C5A10 /* ProjectGroupListResponseMetaModel.swift */; };
-		1E519832283FDF98007C5A10 /* ProjectListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519831283FDF98007C5A10 /* ProjectListResponseMetaModel.swift */; };
-		1E519834283FE011007C5A10 /* ProjectDetailsResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519833283FE011007C5A10 /* ProjectDetailsResponseMetaModel.swift */; };
-		1E519836283FE085007C5A10 /* ProjectFileListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519835283FE085007C5A10 /* ProjectFileListResponseMetaModel.swift */; };
-		1E519838283FE0B5007C5A10 /* ProjectLanguagesResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519837283FE0B5007C5A10 /* ProjectLanguagesResponseMetaModel.swift */; };
-		1E51983A2840AF1B007C5A10 /* ProjectFileImportSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198392840AF1B007C5A10 /* ProjectFileImportSummaryDataModel.swift */; };
-		1E51983C2840AF90007C5A10 /* ProjectFileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */; };
-		1E51983E2840B2EE007C5A10 /* LocaleSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51983D2840B2EE007C5A10 /* LocaleSummaryDataModel.swift */; };
-		1E5198402840F49F007C5A10 /* LocaleRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51983F2840F49F007C5A10 /* LocaleRemoteDataSource.swift */; };
-		1E5198422840F9FE007C5A10 /* ProjectFileUploadResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseDataModel.swift */; };
-		1E5198442840FA35007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198432840FA35007C5A10 /* ProjectFileUploadMetaModel.swift */; };
+		1E51984E2843F3C3007C5A10 /* OneSkyApiClientFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */; };
+		1E51984F2843F3C3007C5A10 /* OneSkyApiClientFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E51984C2843F3C3007C5A10 /* OneSkyApiClientFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1E5198532843F421007C5A10 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197F1283A6D78007C5A10 /* ApiClient.swift */; };
+		1E5198542843F421007C5A10 /* OneSkyApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519800283C0F81007C5A10 /* OneSkyApiService.swift */; };
+		1E5198552843F421007C5A10 /* OneSkyApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197F3283A6D94007C5A10 /* OneSkyApiClient.swift */; };
+		1E5198562843F421007C5A10 /* ApiRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */; };
+		1E5198572843F421007C5A10 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EA28355638007C5A10 /* ApiError.swift */; };
+		1E5198582843F43B007C5A10 /* LocaleRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51983F2840F49F007C5A10 /* LocaleRemoteDataSource.swift */; };
+		1E5198592843F43B007C5A10 /* ProjectFileRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981D283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift */; };
+		1E51985A2843F43B007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */; };
+		1E51985B2843F43B007C5A10 /* ProjectRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */; };
+		1E51985C2843F452007C5A10 /* ProjectListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519831283FDF98007C5A10 /* ProjectListResponseMetaModel.swift */; };
+		1E51985D2843F452007C5A10 /* ProjectFileListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519835283FE085007C5A10 /* ProjectFileListResponseMetaModel.swift */; };
+		1E51985E2843F452007C5A10 /* ProjectLanguagesResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519837283FE0B5007C5A10 /* ProjectLanguagesResponseMetaModel.swift */; };
+		1E51985F2843F452007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198432840FA35007C5A10 /* ProjectFileUploadMetaModel.swift */; };
+		1E5198602843F452007C5A10 /* ProjectDetailsResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519833283FE011007C5A10 /* ProjectDetailsResponseMetaModel.swift */; };
+		1E5198612843F452007C5A10 /* AuthorizationErrorMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51982D283FDEEC007C5A10 /* AuthorizationErrorMetaModel.swift */; };
+		1E5198622843F452007C5A10 /* ProjectGroupListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51982F283FDF2D007C5A10 /* ProjectGroupListResponseMetaModel.swift */; };
+		1E5198632843F45C007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */; };
+		1E5198642843F45C007C5A10 /* ProjectFileListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */; };
+		1E5198652843F45C007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */; };
+		1E5198662843F45C007C5A10 /* ProjectFileUploadResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseDataModel.swift */; };
+		1E5198672843F45C007C5A10 /* ProjectListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */; };
+		1E5198682843F45C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */; };
+		1E5198692843F45C007C5A10 /* ProjectDetailsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */; };
+		1E51986A2843F465007C5A10 /* ProjectFileImportSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198392840AF1B007C5A10 /* ProjectFileImportSummaryDataModel.swift */; };
+		1E51986B2843F465007C5A10 /* ProjectLanguageDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51982B283FDDEE007C5A10 /* ProjectLanguageDataModel.swift */; };
+		1E51986C2843F465007C5A10 /* ProjectGroupSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519823283FDCDA007C5A10 /* ProjectGroupSummaryDataModel.swift */; };
+		1E51986D2843F465007C5A10 /* ProjectFileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519829283FDDB7007C5A10 /* ProjectFileDataModel.swift */; };
+		1E51986E2843F465007C5A10 /* LocaleSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51983D2840B2EE007C5A10 /* LocaleSummaryDataModel.swift */; };
+		1E51986F2843F465007C5A10 /* ProjectFileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */; };
+		1E5198702843F465007C5A10 /* ProjectDetailsDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519827283FDD5B007C5A10 /* ProjectDetailsDataModel.swift */; };
+		1E5198712843F465007C5A10 /* ProjectSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519825283FDD0F007C5A10 /* ProjectSummaryDataModel.swift */; };
+		1E5198722843F47A007C5A10 /* MD5Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197FA283A75EB007C5A10 /* MD5Helper.swift */; };
+		1E5198732843F47A007C5A10 /* OneSkyAuthHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197FE283C0C46007C5A10 /* OneSkyAuthHelpers.swift */; };
+		1E5198742843F48F007C5A10 /* ApplicationUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519803283C9BB3007C5A10 /* ApplicationUrls.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E5198752843F549007C5A10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1E5197D5283551AD007C5A10 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E5198492843F3C3007C5A10;
+			remoteInfo = OneSkyApiClientFramework;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		1E5197DB283551AD007C5A10 /* CopyFiles */ = {
@@ -56,10 +69,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E51987B2843F752007C5A10 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		1E5197DD283551AD007C5A10 /* OneSkyApiClient */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OneSkyApiClient; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1E9CC92843F989002E0E87 /* OneSkyCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = OneSkyCLI; path = /Users/rajusa/Rajusa/OneSkyApiClient/build/Debug/OneSkyCLI; sourceTree = "<absolute>"; };
+		1E1E9CCA2843F989002E0E87 /* OneSkyClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OneSkyClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1E1E9CCB2843FB8A002E0E87 /* OneSkyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSkyClient.swift; sourceTree = "<group>"; };
+		1E1E9CCD2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSkySecretKeyHelper.swift; sourceTree = "<group>"; };
 		1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineInterfaceMain.swift; sourceTree = "<group>"; };
 		1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBuilder.swift; sourceTree = "<group>"; };
 		1E5197EA28355638007C5A10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -97,6 +123,8 @@
 		1E51983F2840F49F007C5A10 /* LocaleRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleRemoteDataSource.swift; sourceTree = "<group>"; };
 		1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileUploadResponseDataModel.swift; sourceTree = "<group>"; };
 		1E5198432840FA35007C5A10 /* ProjectFileUploadMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileUploadMetaModel.swift; sourceTree = "<group>"; };
+		1E51984C2843F3C3007C5A10 /* OneSkyApiClientFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSkyApiClientFramework.h; sourceTree = "<group>"; };
+		1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OneSkyApiClientFramework.docc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +132,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E519814283D0165007C5A10 /* ArgumentParser in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E5198472843F3C3007C5A10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,31 +149,19 @@
 			isa = PBXGroup;
 			children = (
 				1E51980A283CBBCA007C5A10 /* apikeys.plist */,
-				1E5197DF283551AD007C5A10 /* OneSkyApiClient */,
-				1E5197DE283551AD007C5A10 /* Products */,
+				1E5197DF283551AD007C5A10 /* OneSkyCLI */,
+				1E51984B2843F3C3007C5A10 /* OneSkyClient */,
+				1E1E9CCA2843F989002E0E87 /* OneSkyClient.framework */,
 			);
 			sourceTree = "<group>";
 		};
-		1E5197DE283551AD007C5A10 /* Products */ = {
+		1E5197DF283551AD007C5A10 /* OneSkyCLI */ = {
 			isa = PBXGroup;
 			children = (
-				1E5197DD283551AD007C5A10 /* OneSkyApiClient */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		1E5197DF283551AD007C5A10 /* OneSkyApiClient */ = {
-			isa = PBXGroup;
-			children = (
-				1E519802283C9B9D007C5A10 /* Helpers */,
-				1E5197F9283A7511007C5A10 /* Authentication */,
-				1E5197EC2836B548007C5A10 /* Data Model */,
-				1E519807283CA227007C5A10 /* Remote Data Sources */,
-				1E5197E728355466007C5A10 /* Api Client */,
 				1E5197ED283A6941007C5A10 /* SecretKeyManager */,
 				1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */,
 			);
-			path = OneSkyApiClient;
+			path = OneSkyCLI;
 			sourceTree = "<group>";
 		};
 		1E5197E728355466007C5A10 /* Api Client */ = {
@@ -175,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				1E5197EE283A6976007C5A10 /* SecretKeyManager.swift */,
+				1E1E9CCD2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift */,
 			);
 			path = SecretKeyManager;
 			sourceTree = "<group>";
@@ -235,28 +258,73 @@
 			path = "Response Meta Models";
 			sourceTree = "<group>";
 		};
+		1E51984B2843F3C3007C5A10 /* OneSkyClient */ = {
+			isa = PBXGroup;
+			children = (
+				1E1E9CCB2843FB8A002E0E87 /* OneSkyClient.swift */,
+				1E519802283C9B9D007C5A10 /* Helpers */,
+				1E5197F9283A7511007C5A10 /* Authentication */,
+				1E5197EC2836B548007C5A10 /* Data Model */,
+				1E519807283CA227007C5A10 /* Remote Data Sources */,
+				1E5197E728355466007C5A10 /* Api Client */,
+				1E51984C2843F3C3007C5A10 /* OneSkyApiClientFramework.h */,
+				1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */,
+			);
+			path = OneSkyClient;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		1E5198452843F3C3007C5A10 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E51984F2843F3C3007C5A10 /* OneSkyApiClientFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		1E5197DC283551AD007C5A10 /* OneSkyApiClient */ = {
+		1E5197DC283551AD007C5A10 /* OneSkyCLI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1E5197E4283551AD007C5A10 /* Build configuration list for PBXNativeTarget "OneSkyApiClient" */;
+			buildConfigurationList = 1E5197E4283551AD007C5A10 /* Build configuration list for PBXNativeTarget "OneSkyCLI" */;
 			buildPhases = (
 				1E5197D9283551AD007C5A10 /* Sources */,
 				1E5197DA283551AD007C5A10 /* Frameworks */,
 				1E5197DB283551AD007C5A10 /* CopyFiles */,
+				1E51987B2843F752007C5A10 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E5198762843F549007C5A10 /* PBXTargetDependency */,
+			);
+			name = OneSkyCLI;
+			packageProductDependencies = (
+			);
+			productName = OneSkyApiClient;
+			productReference = 1E1E9CC92843F989002E0E87 /* OneSkyCLI */;
+			productType = "com.apple.product-type.tool";
+		};
+		1E5198492843F3C3007C5A10 /* OneSkyClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1E5198502843F3C3007C5A10 /* Build configuration list for PBXNativeTarget "OneSkyClient" */;
+			buildPhases = (
+				1E5198452843F3C3007C5A10 /* Headers */,
+				1E5198462843F3C3007C5A10 /* Sources */,
+				1E5198472843F3C3007C5A10 /* Frameworks */,
+				1E5198482843F3C3007C5A10 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = OneSkyApiClient;
-			packageProductDependencies = (
-				1E519813283D0165007C5A10 /* ArgumentParser */,
-			);
-			productName = OneSkyApiClient;
-			productReference = 1E5197DD283551AD007C5A10 /* OneSkyApiClient */;
-			productType = "com.apple.product-type.tool";
+			name = OneSkyClient;
+			productName = OneSkyApiClientFramework;
+			productReference = 1E1E9CCA2843F989002E0E87 /* OneSkyClient.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -271,6 +339,9 @@
 					1E5197DC283551AD007C5A10 = {
 						CreatedOnToolsVersion = 13.3.1;
 					};
+					1E5198492843F3C3007C5A10 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 1E5197D8283551AD007C5A10 /* Build configuration list for PBXProject "OneSkyApiClient" */;
@@ -283,62 +354,90 @@
 			);
 			mainGroup = 1E5197D4283551AD007C5A10;
 			packageReferences = (
-				1E519812283D0165007C5A10 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
-			productRefGroup = 1E5197DE283551AD007C5A10 /* Products */;
+			productRefGroup = 1E5197D4283551AD007C5A10;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1E5197DC283551AD007C5A10 /* OneSkyApiClient */,
+				1E5197DC283551AD007C5A10 /* OneSkyCLI */,
+				1E5198492843F3C3007C5A10 /* OneSkyClient */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E5198482843F3C3007C5A10 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E5197D9283551AD007C5A10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E519809283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */,
-				1E519838283FE0B5007C5A10 /* ProjectLanguagesResponseMetaModel.swift in Sources */,
-				1E5197FF283C0C46007C5A10 /* OneSkyAuthHelpers.swift in Sources */,
-				1E519832283FDF98007C5A10 /* ProjectListResponseMetaModel.swift in Sources */,
-				1E5198422840F9FE007C5A10 /* ProjectFileUploadResponseDataModel.swift in Sources */,
-				1E51982A283FDDB7007C5A10 /* ProjectFileDataModel.swift in Sources */,
-				1E519830283FDF2D007C5A10 /* ProjectGroupListResponseMetaModel.swift in Sources */,
-				1E519811283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */,
-				1E5197E928355481007C5A10 /* ApiRequestBuilder.swift in Sources */,
-				1E519828283FDD5B007C5A10 /* ProjectDetailsDataModel.swift in Sources */,
-				1E51981C283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */,
 				1E5197E1283551AD007C5A10 /* CommandLineInterfaceMain.swift in Sources */,
-				1E5197EB28355638007C5A10 /* ApiError.swift in Sources */,
-				1E51983A2840AF1B007C5A10 /* ProjectFileImportSummaryDataModel.swift in Sources */,
-				1E519826283FDD0F007C5A10 /* ProjectSummaryDataModel.swift in Sources */,
-				1E519834283FE011007C5A10 /* ProjectDetailsResponseMetaModel.swift in Sources */,
-				1E519806283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */,
-				1E519801283C0F81007C5A10 /* OneSkyApiService.swift in Sources */,
-				1E519818283D4EBC007C5A10 /* ProjectListResponseModel.swift in Sources */,
-				1E5198402840F49F007C5A10 /* LocaleRemoteDataSource.swift in Sources */,
-				1E51983C2840AF90007C5A10 /* ProjectFileFormat.swift in Sources */,
-				1E519804283C9BB3007C5A10 /* ApplicationUrls.swift in Sources */,
-				1E519820283FBAF6007C5A10 /* ProjectFileListResponseModel.swift in Sources */,
-				1E51982C283FDDEE007C5A10 /* ProjectLanguageDataModel.swift in Sources */,
+				1E1E9CCE2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift in Sources */,
 				1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */,
-				1E51981A283D56ED007C5A10 /* ProjectDetailsResponseModel.swift in Sources */,
-				1E519824283FDCDA007C5A10 /* ProjectGroupSummaryDataModel.swift in Sources */,
-				1E519816283D4E74007C5A10 /* ProjectRemoteDataSource.swift in Sources */,
-				1E51983E2840B2EE007C5A10 /* LocaleSummaryDataModel.swift in Sources */,
-				1E5197F4283A6D94007C5A10 /* OneSkyApiClient.swift in Sources */,
-				1E51982E283FDEEC007C5A10 /* AuthorizationErrorMetaModel.swift in Sources */,
-				1E519836283FE085007C5A10 /* ProjectFileListResponseMetaModel.swift in Sources */,
-				1E5197F2283A6D78007C5A10 /* ApiClient.swift in Sources */,
-				1E51981E283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift in Sources */,
-				1E5198442840FA35007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */,
-				1E5197FB283A75EB007C5A10 /* MD5Helper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1E5198462843F3C3007C5A10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E51985B2843F43B007C5A10 /* ProjectRemoteDataSource.swift in Sources */,
+				1E5198622843F452007C5A10 /* ProjectGroupListResponseMetaModel.swift in Sources */,
+				1E51985C2843F452007C5A10 /* ProjectListResponseMetaModel.swift in Sources */,
+				1E5198632843F45C007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */,
+				1E5198742843F48F007C5A10 /* ApplicationUrls.swift in Sources */,
+				1E1E9CCC2843FB8A002E0E87 /* OneSkyClient.swift in Sources */,
+				1E5198542843F421007C5A10 /* OneSkyApiService.swift in Sources */,
+				1E51985D2843F452007C5A10 /* ProjectFileListResponseMetaModel.swift in Sources */,
+				1E5198682843F45C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */,
+				1E5198582843F43B007C5A10 /* LocaleRemoteDataSource.swift in Sources */,
+				1E5198712843F465007C5A10 /* ProjectSummaryDataModel.swift in Sources */,
+				1E51984E2843F3C3007C5A10 /* OneSkyApiClientFramework.docc in Sources */,
+				1E51986C2843F465007C5A10 /* ProjectGroupSummaryDataModel.swift in Sources */,
+				1E51986A2843F465007C5A10 /* ProjectFileImportSummaryDataModel.swift in Sources */,
+				1E5198732843F47A007C5A10 /* OneSkyAuthHelpers.swift in Sources */,
+				1E51986D2843F465007C5A10 /* ProjectFileDataModel.swift in Sources */,
+				1E51986F2843F465007C5A10 /* ProjectFileFormat.swift in Sources */,
+				1E5198652843F45C007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */,
+				1E51985A2843F43B007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */,
+				1E5198552843F421007C5A10 /* OneSkyApiClient.swift in Sources */,
+				1E5198662843F45C007C5A10 /* ProjectFileUploadResponseDataModel.swift in Sources */,
+				1E5198672843F45C007C5A10 /* ProjectListResponseModel.swift in Sources */,
+				1E51985F2843F452007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */,
+				1E5198642843F45C007C5A10 /* ProjectFileListResponseModel.swift in Sources */,
+				1E5198562843F421007C5A10 /* ApiRequestBuilder.swift in Sources */,
+				1E51985E2843F452007C5A10 /* ProjectLanguagesResponseMetaModel.swift in Sources */,
+				1E5198532843F421007C5A10 /* ApiClient.swift in Sources */,
+				1E5198702843F465007C5A10 /* ProjectDetailsDataModel.swift in Sources */,
+				1E51986E2843F465007C5A10 /* LocaleSummaryDataModel.swift in Sources */,
+				1E5198692843F45C007C5A10 /* ProjectDetailsResponseModel.swift in Sources */,
+				1E5198592843F43B007C5A10 /* ProjectFileRemoteDataSource.swift in Sources */,
+				1E5198612843F452007C5A10 /* AuthorizationErrorMetaModel.swift in Sources */,
+				1E5198722843F47A007C5A10 /* MD5Helper.swift in Sources */,
+				1E51986B2843F465007C5A10 /* ProjectLanguageDataModel.swift in Sources */,
+				1E5198572843F421007C5A10 /* ApiError.swift in Sources */,
+				1E5198602843F452007C5A10 /* ProjectDetailsResponseMetaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E5198762843F549007C5A10 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E5198492843F3C3007C5A10 /* OneSkyClient */;
+			targetProxy = 1E5198752843F549007C5A10 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1E5197E2283551AD007C5A10 /* Debug */ = {
@@ -460,6 +559,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57FB56R42B;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajusa.OneSkyCLI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -471,8 +571,71 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57FB56R42B;
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajusa.OneSkyCLI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		1E5198512843F3C3007C5A10 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 57FB56R42B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajusa.OneSkyClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1E5198522843F3C3007C5A10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 57FB56R42B;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajusa.OneSkyClient;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -488,7 +651,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1E5197E4283551AD007C5A10 /* Build configuration list for PBXNativeTarget "OneSkyApiClient" */ = {
+		1E5197E4283551AD007C5A10 /* Build configuration list for PBXNativeTarget "OneSkyCLI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1E5197E5283551AD007C5A10 /* Debug */,
@@ -497,26 +660,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		1E5198502843F3C3007C5A10 /* Build configuration list for PBXNativeTarget "OneSkyClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E5198512843F3C3007C5A10 /* Debug */,
+				1E5198522843F3C3007C5A10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		1E519812283D0165007C5A10 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		1E519813283D0165007C5A10 /* ArgumentParser */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1E519812283D0165007C5A10 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
-			productName = ArgumentParser;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E5197D5283551AD007C5A10 /* Project object */;
 }

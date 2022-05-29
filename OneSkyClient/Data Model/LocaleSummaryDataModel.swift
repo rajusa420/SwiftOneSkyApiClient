@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct LocaleSummaryMetaModel: Codable {
+public struct LocaleSummaryMetaModel: Codable {
     let status: Int
     let record_count: Int
 }
 
-struct LocaleSummaryDataModel: Codable {
+public struct LocaleSummaryDataModel: Codable {
     let code: String
     let english_name: String
     let local_name: String
@@ -20,7 +20,7 @@ struct LocaleSummaryDataModel: Codable {
     let region: String
 }
 
-struct LocaleSummaryResponseModel: Codable {
+public struct LocaleSummaryResponseModel: Codable {
     let meta: LocaleSummaryMetaModel
     let data: [LocaleSummaryDataModel]
 }

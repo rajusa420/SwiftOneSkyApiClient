@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ProjectRemoteDataSource {
+open class ProjectRemoteDataSource {
     public static func getProjectList(forProjectGroupId projectGroupId: String) async throws -> [ProjectSummaryDataModel] {
         let response: ProjectListResponseModel = try await OneSkyApiService.instance.apiClient.get(ApplicationUrls.getProjectListPath(forProjectGroupId: projectGroupId))
         return response.data

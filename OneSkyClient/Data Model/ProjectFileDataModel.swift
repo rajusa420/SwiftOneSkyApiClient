@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct ProjectFileLastImportModel: Codable {
+public struct ProjectFileLastImportModel: Codable {
     let id: Int
     let status: String
 }
 
-struct ProjectFileDataModel: Codable {
+public struct ProjectFileDataModel: Codable {
     let file_name: String
     let string_count: Int
     let last_import: ProjectFileLastImportModel

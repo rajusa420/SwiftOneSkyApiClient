@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct ProjectTypeDataModel: Codable {
+public struct ProjectTypeDataModel: Codable {
     let code: String
     let name: String
 }
 
-struct ProjectDetailsDataModel: Codable {
+public struct ProjectDetailsDataModel: Codable {
     let id: Int
     let name: String
     let description: String?
