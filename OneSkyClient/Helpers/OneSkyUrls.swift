@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ApplicationUrlConstants {
+class OneSkyUrlConstants {
     public static var urlProtocol: String {
         return "https://"
     }
@@ -17,9 +17,9 @@ class ApplicationUrlConstants {
     }
 }
 
-class ApplicationUrls {
+class OneSkyUrls {
     public static var basePath: String {
-        return "\(ApplicationUrlConstants.urlProtocol)\(ApplicationUrlConstants.domain)"
+        return "\(OneSkyUrlConstants.urlProtocol)\(OneSkyUrlConstants.domain)"
     }
     
     public static var projectGroupListPath: String = "project-groups"
@@ -37,7 +37,7 @@ class ApplicationUrls {
         return "projects/\(projectId)/languages"
     }
     
-    public static func getProjectFileListPath(forProjectId projectId: String) -> String {
+    public static func getProjectFilesPath(forProjectId projectId: String) -> String {
         return "projects/\(projectId)/files"
     }
     

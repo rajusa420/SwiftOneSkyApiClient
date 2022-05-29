@@ -7,16 +7,7 @@
 
 import Foundation
 
-struct ProjectFileUploadResponseDataModel: Codable {
-    enum CodingKeys: String, CodingKey {
-        case name
-        case format
-        case language
-        case importSummary = "import"
-    }
-    
-    let name: String
-    let format: String
-    let language: LocaleSummaryDataModel
-    let importSummary: ProjectFileImportSummaryDataModel
+struct ProjectFileUploadResponseModel: Codable {
+    let meta: ProjectFileUploadMetaModel
+    let data: ProjectFileUploadResponseDataModel
 }

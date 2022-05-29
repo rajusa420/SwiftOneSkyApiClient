@@ -9,5 +9,5 @@ import Foundation
 
 class OneSkyApiService {
     static let instance = OneSkyApiService()
-    lazy var apiClient = OneSkyApiClient(baseURL: ApplicationUrls.basePath)
+    lazy var apiClient = OneSkyApiClient(baseURL: OneSkyUrls.basePath)
 }

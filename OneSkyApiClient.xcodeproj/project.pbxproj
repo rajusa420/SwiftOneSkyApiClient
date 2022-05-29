@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1E1E9CCC2843FB8A002E0E87 /* OneSkyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CCB2843FB8A002E0E87 /* OneSkyClient.swift */; };
 		1E1E9CCE2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CCD2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift */; };
+		1E1E9CD12844025E002E0E87 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1E1E9CD02844025E002E0E87 /* ArgumentParser */; };
+		1E1E9CD328442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */; };
+		1E1E9CD52844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD42844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift */; };
+		1E1E9CD7284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD6284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift */; };
+		1E1E9CD9284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD8284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift */; };
 		1E5197E1283551AD007C5A10 /* CommandLineInterfaceMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */; };
 		1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EE283A6976007C5A10 /* SecretKeyManager.swift */; };
 		1E51984E2843F3C3007C5A10 /* OneSkyApiClientFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */; };
@@ -46,7 +51,7 @@
 		1E5198712843F465007C5A10 /* ProjectSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519825283FDD0F007C5A10 /* ProjectSummaryDataModel.swift */; };
 		1E5198722843F47A007C5A10 /* MD5Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197FA283A75EB007C5A10 /* MD5Helper.swift */; };
 		1E5198732843F47A007C5A10 /* OneSkyAuthHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197FE283C0C46007C5A10 /* OneSkyAuthHelpers.swift */; };
-		1E5198742843F48F007C5A10 /* ApplicationUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519803283C9BB3007C5A10 /* ApplicationUrls.swift */; };
+		1E5198742843F48F007C5A10 /* OneSkyUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519803283C9BB3007C5A10 /* OneSkyUrls.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +91,10 @@
 		1E1E9CCA2843F989002E0E87 /* OneSkyClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OneSkyClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E1E9CCB2843FB8A002E0E87 /* OneSkyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSkyClient.swift; sourceTree = "<group>"; };
 		1E1E9CCD2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSkySecretKeyHelper.swift; sourceTree = "<group>"; };
+		1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileDeleteSummaryDataModel.swift; sourceTree = "<group>"; };
+		1E1E9CD42844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileDeleteResponseMetaModel.swift; sourceTree = "<group>"; };
+		1E1E9CD6284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileDeleteResponseModel.swift; sourceTree = "<group>"; };
+		1E1E9CD8284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileUploadResponseDataModel.swift; sourceTree = "<group>"; };
 		1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineInterfaceMain.swift; sourceTree = "<group>"; };
 		1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBuilder.swift; sourceTree = "<group>"; };
 		1E5197EA28355638007C5A10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -95,7 +104,7 @@
 		1E5197FA283A75EB007C5A10 /* MD5Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MD5Helper.swift; sourceTree = "<group>"; };
 		1E5197FE283C0C46007C5A10 /* OneSkyAuthHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSkyAuthHelpers.swift; sourceTree = "<group>"; };
 		1E519800283C0F81007C5A10 /* OneSkyApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSkyApiService.swift; sourceTree = "<group>"; };
-		1E519803283C9BB3007C5A10 /* ApplicationUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationUrls.swift; sourceTree = "<group>"; };
+		1E519803283C9BB3007C5A10 /* OneSkyUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSkyUrls.swift; sourceTree = "<group>"; };
 		1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupListResponseModel.swift; sourceTree = "<group>"; };
 		1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupRemoteDataSource.swift; sourceTree = "<group>"; };
 		1E51980A283CBBCA007C5A10 /* apikeys.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = apikeys.plist; sourceTree = "<group>"; };
@@ -132,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E1E9CD12844025E002E0E87 /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +197,8 @@
 				1E519829283FDDB7007C5A10 /* ProjectFileDataModel.swift */,
 				1E51982B283FDDEE007C5A10 /* ProjectLanguageDataModel.swift */,
 				1E5198392840AF1B007C5A10 /* ProjectFileImportSummaryDataModel.swift */,
+				1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */,
+				1E1E9CD8284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift */,
 				1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */,
 				1E51983D2840B2EE007C5A10 /* LocaleSummaryDataModel.swift */,
 			);
@@ -214,7 +226,7 @@
 		1E519802283C9B9D007C5A10 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				1E519803283C9BB3007C5A10 /* ApplicationUrls.swift */,
+				1E519803283C9BB3007C5A10 /* OneSkyUrls.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -234,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */,
+				1E1E9CD6284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift */,
 				1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */,
 				1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */,
 				1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */,
@@ -248,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				1E51982D283FDEEC007C5A10 /* AuthorizationErrorMetaModel.swift */,
+				1E1E9CD42844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift */,
 				1E519831283FDF98007C5A10 /* ProjectListResponseMetaModel.swift */,
 				1E51982F283FDF2D007C5A10 /* ProjectGroupListResponseMetaModel.swift */,
 				1E519833283FE011007C5A10 /* ProjectDetailsResponseMetaModel.swift */,
@@ -303,6 +317,7 @@
 			);
 			name = OneSkyCLI;
 			packageProductDependencies = (
+				1E1E9CD02844025E002E0E87 /* ArgumentParser */,
 			);
 			productName = OneSkyApiClient;
 			productReference = 1E1E9CC92843F989002E0E87 /* OneSkyCLI */;
@@ -354,6 +369,7 @@
 			);
 			mainGroup = 1E5197D4283551AD007C5A10;
 			packageReferences = (
+				1E1E9CCF2844025E002E0E87 /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
 			);
 			productRefGroup = 1E5197D4283551AD007C5A10;
 			projectDirPath = "";
@@ -393,11 +409,13 @@
 				1E51985B2843F43B007C5A10 /* ProjectRemoteDataSource.swift in Sources */,
 				1E5198622843F452007C5A10 /* ProjectGroupListResponseMetaModel.swift in Sources */,
 				1E51985C2843F452007C5A10 /* ProjectListResponseMetaModel.swift in Sources */,
+				1E1E9CD328442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift in Sources */,
 				1E5198632843F45C007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */,
-				1E5198742843F48F007C5A10 /* ApplicationUrls.swift in Sources */,
+				1E5198742843F48F007C5A10 /* OneSkyUrls.swift in Sources */,
 				1E1E9CCC2843FB8A002E0E87 /* OneSkyClient.swift in Sources */,
 				1E5198542843F421007C5A10 /* OneSkyApiService.swift in Sources */,
 				1E51985D2843F452007C5A10 /* ProjectFileListResponseMetaModel.swift in Sources */,
+				1E1E9CD9284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift in Sources */,
 				1E5198682843F45C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */,
 				1E5198582843F43B007C5A10 /* LocaleRemoteDataSource.swift in Sources */,
 				1E5198712843F465007C5A10 /* ProjectSummaryDataModel.swift in Sources */,
@@ -405,6 +423,7 @@
 				1E51986C2843F465007C5A10 /* ProjectGroupSummaryDataModel.swift in Sources */,
 				1E51986A2843F465007C5A10 /* ProjectFileImportSummaryDataModel.swift in Sources */,
 				1E5198732843F47A007C5A10 /* OneSkyAuthHelpers.swift in Sources */,
+				1E1E9CD52844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift in Sources */,
 				1E51986D2843F465007C5A10 /* ProjectFileDataModel.swift in Sources */,
 				1E51986F2843F465007C5A10 /* ProjectFileFormat.swift in Sources */,
 				1E5198652843F45C007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */,
@@ -412,6 +431,7 @@
 				1E5198552843F421007C5A10 /* OneSkyApiClient.swift in Sources */,
 				1E5198662843F45C007C5A10 /* ProjectFileUploadResponseDataModel.swift in Sources */,
 				1E5198672843F45C007C5A10 /* ProjectListResponseModel.swift in Sources */,
+				1E1E9CD7284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift in Sources */,
 				1E51985F2843F452007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */,
 				1E5198642843F45C007C5A10 /* ProjectFileListResponseModel.swift in Sources */,
 				1E5198562843F421007C5A10 /* ApiRequestBuilder.swift in Sources */,
@@ -670,6 +690,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1E1E9CCF2844025E002E0E87 /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1E1E9CD02844025E002E0E87 /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1E1E9CCF2844025E002E0E87 /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1E5197D5283551AD007C5A10 /* Project object */;
 }
