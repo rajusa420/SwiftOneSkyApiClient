@@ -9,5 +9,5 @@ import Foundation
 
 struct ProjectFileUploadResponseModel: Codable {
     let meta: ProjectFileUploadMetaModel
-    let data: ProjectFileUploadResponseDataModel
+    let data: ProjectFileUploadSummaryDataModel
 }

@@ -13,7 +13,7 @@
 		1E1E9CD328442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */; };
 		1E1E9CD52844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD42844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift */; };
 		1E1E9CD7284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD6284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift */; };
-		1E1E9CD9284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD8284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift */; };
+		1E1E9CD9284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD8284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift */; };
 		1E5197E1283551AD007C5A10 /* CommandLineInterfaceMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */; };
 		1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EE283A6976007C5A10 /* SecretKeyManager.swift */; };
 		1E51984E2843F3C3007C5A10 /* OneSkyApiClientFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */; };
@@ -37,7 +37,7 @@
 		1E5198632843F45C007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */; };
 		1E5198642843F45C007C5A10 /* ProjectFileListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */; };
 		1E5198652843F45C007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */; };
-		1E5198662843F45C007C5A10 /* ProjectFileUploadResponseDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseDataModel.swift */; };
+		1E5198662843F45C007C5A10 /* ProjectFileUploadResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseModel.swift */; };
 		1E5198672843F45C007C5A10 /* ProjectListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */; };
 		1E5198682843F45C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519805283C9E1C007C5A10 /* ProjectGroupListResponseModel.swift */; };
 		1E5198692843F45C007C5A10 /* ProjectDetailsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */; };
@@ -94,7 +94,7 @@
 		1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileDeleteSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E1E9CD42844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileDeleteResponseMetaModel.swift; sourceTree = "<group>"; };
 		1E1E9CD6284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileDeleteResponseModel.swift; sourceTree = "<group>"; };
-		1E1E9CD8284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileUploadResponseDataModel.swift; sourceTree = "<group>"; };
+		1E1E9CD8284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileUploadSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E5197E0283551AD007C5A10 /* CommandLineInterfaceMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandLineInterfaceMain.swift; sourceTree = "<group>"; };
 		1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBuilder.swift; sourceTree = "<group>"; };
 		1E5197EA28355638007C5A10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileFormat.swift; sourceTree = "<group>"; };
 		1E51983D2840B2EE007C5A10 /* LocaleSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E51983F2840F49F007C5A10 /* LocaleRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleRemoteDataSource.swift; sourceTree = "<group>"; };
-		1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileUploadResponseDataModel.swift; sourceTree = "<group>"; };
+		1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileUploadResponseModel.swift; sourceTree = "<group>"; };
 		1E5198432840FA35007C5A10 /* ProjectFileUploadMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileUploadMetaModel.swift; sourceTree = "<group>"; };
 		1E51984C2843F3C3007C5A10 /* OneSkyApiClientFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSkyApiClientFramework.h; sourceTree = "<group>"; };
 		1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OneSkyApiClientFramework.docc; sourceTree = "<group>"; };
@@ -198,7 +198,7 @@
 				1E51982B283FDDEE007C5A10 /* ProjectLanguageDataModel.swift */,
 				1E5198392840AF1B007C5A10 /* ProjectFileImportSummaryDataModel.swift */,
 				1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */,
-				1E1E9CD8284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift */,
+				1E1E9CD8284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift */,
 				1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */,
 				1E51983D2840B2EE007C5A10 /* LocaleSummaryDataModel.swift */,
 			);
@@ -252,7 +252,7 @@
 				1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */,
 				1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */,
 				1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */,
-				1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseDataModel.swift */,
+				1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseModel.swift */,
 			);
 			path = "Response Models";
 			sourceTree = "<group>";
@@ -415,7 +415,7 @@
 				1E1E9CCC2843FB8A002E0E87 /* OneSkyClient.swift in Sources */,
 				1E5198542843F421007C5A10 /* OneSkyApiService.swift in Sources */,
 				1E51985D2843F452007C5A10 /* ProjectFileListResponseMetaModel.swift in Sources */,
-				1E1E9CD9284427B9002E0E87 /* ProjectFileUploadResponseDataModel.swift in Sources */,
+				1E1E9CD9284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift in Sources */,
 				1E5198682843F45C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */,
 				1E5198582843F43B007C5A10 /* LocaleRemoteDataSource.swift in Sources */,
 				1E5198712843F465007C5A10 /* ProjectSummaryDataModel.swift in Sources */,
@@ -429,7 +429,7 @@
 				1E5198652843F45C007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */,
 				1E51985A2843F43B007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */,
 				1E5198552843F421007C5A10 /* OneSkyApiClient.swift in Sources */,
-				1E5198662843F45C007C5A10 /* ProjectFileUploadResponseDataModel.swift in Sources */,
+				1E5198662843F45C007C5A10 /* ProjectFileUploadResponseModel.swift in Sources */,
 				1E5198672843F45C007C5A10 /* ProjectListResponseModel.swift in Sources */,
 				1E1E9CD7284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift in Sources */,
 				1E51985F2843F452007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */,

@@ -9,29 +9,31 @@ import Foundation
 import OneSkyClient
 
 func fetchUpdates() async {
+    // The project group id: 173959
+    // The project id: 387918
+    let projectGroupListTask = Task { () -> [ProjectGroupSummaryDataModel] in
+        let projectGroupList = try await ProjectGroupRemoteDataSource.getProjectGroupList()
+        return projectGroupList
+    }
+    
     let projectListSummaryTask = Task { () -> [ProjectSummaryDataModel] in
-        let projectList = try await ProjectRemoteDataSource.getProjectList(forProjectGroupId: "142169")
+        let projectList = try await ProjectRemoteDataSource.getProjectList(forProjectGroupId: "173959")
         return projectList
     }
     
     let projectDetailsTask = Task { () -> ProjectDetailsDataModel in
-        let projectDetails = try await ProjectRemoteDataSource.getDetails(forProjectId: "314511")
+        let projectDetails = try await ProjectRemoteDataSource.getDetails(forProjectId: "387918")
         return projectDetails
     }
     
-    let projectLanguagesTask = Task { () -> [ProjectLanguageDataModel] in
-        let projectLanguages = try await ProjectRemoteDataSource.getLanguages(forProjectId: "314511")
-        return projectLanguages
-    }
-
     do {
+        async let projectGroupList = projectGroupListTask.value
         async let projectList = projectListSummaryTask.value
         async let projectDetails = projectDetailsTask.value
-        async let projectLanguages = projectLanguagesTask.value
         
+        print("Project group list: \(try await projectGroupList)")
         print("Project list: \(try await projectList)")
         print("Project details: \(try await projectDetails)")
-        print("Project languages: \(try await projectLanguages)")
     } catch let error as APIError {
         print("API error: \(error.getApiErrorMessage())")
     } catch {
