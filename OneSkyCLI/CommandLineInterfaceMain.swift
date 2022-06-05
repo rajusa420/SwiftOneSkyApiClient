@@ -18,18 +18,23 @@ func fetchUpdates() async {
 //        return projectCreateSummary
 //    }
     
+    let projectUpdateTask = Task { () -> Void in
+        try await ProjectRemoteDataSource.updateProject(projectId: "387995", name: "My test new name", description: "Testing update")
+    }
+    
     let projectListSummaryTask = Task { () -> [ProjectSummaryDataModel] in
         let projectList = try await ProjectRemoteDataSource.getProjectList(forProjectGroupId: "173959")
         return projectList
     }
     
     let projectDetailsTask = Task { () -> ProjectDetailsDataModel in
-        let projectDetails = try await ProjectRemoteDataSource.getDetails(forProjectId: "387918")
+        let projectDetails = try await ProjectRemoteDataSource.getDetails(forProjectId: "387995")
         return projectDetails
     }
     
     do {
         //async let projectCreateSummary = projectCreateTask.value
+        try await projectUpdateTask.value
         async let projectList = projectListSummaryTask.value
         async let projectDetails = projectDetailsTask.value
         

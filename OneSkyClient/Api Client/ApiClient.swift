@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct EmptyRequestBody: Codable {
+}
+
+struct EmptyResponseBody: Codable {
+}
+
 class ApiClient {
     var baseURL: String
     
@@ -77,11 +83,16 @@ class ApiClient {
     func decodeResponse<ResponseType: Decodable>(data: Data) async throws -> ResponseType {
         let response: ResponseType = try await withCheckedThrowingContinuation { continuation in
             do {
-                let jsonDecoder = JSONDecoder()
-                jsonDecoder.dateDecodingStrategy = .iso8601
+                if data.count <= 0,
+                   let response = EmptyResponseBody() as? ResponseType {
+                    continuation.resume(returning: response)
+                } else {
+                    let jsonDecoder = JSONDecoder()
+                    jsonDecoder.dateDecodingStrategy = .iso8601
 
-                let decodedResponse = try jsonDecoder.decode(ResponseType.self, from: data)
-                continuation.resume(returning: decodedResponse)
+                    let decodedResponse = try jsonDecoder.decode(ResponseType.self, from: data)
+                    continuation.resume(returning: decodedResponse)
+                }
             } catch {
                 continuation.resume(throwing: APIError.decodingError(message: error.localizedDescription))
             }

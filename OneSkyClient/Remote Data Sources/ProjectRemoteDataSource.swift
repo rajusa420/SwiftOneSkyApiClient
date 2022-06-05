@@ -7,9 +7,6 @@
 
 import Foundation
 
-struct EmptyRequestBody: Codable {
-}
-
 open class ProjectRemoteDataSource {
     public static func getProjectList(forProjectGroupId projectGroupId: String) async throws -> [ProjectSummaryDataModel] {
         let response: ProjectListResponseModel = try await OneSkyApiService.instance.apiClient.get(OneSkyUrls.getProjectListPath(forProjectGroupId: projectGroupId))
@@ -39,8 +36,29 @@ open class ProjectRemoteDataSource {
         let response: ProjectCreateResponseModel = try await OneSkyApiService.instance.apiClient.post(
             OneSkyUrls.getProjectListPath(forProjectGroupId: projectGroupId),
             body: EmptyRequestBody(),
-            queryItems: queryItems)
+            queryItems: queryItems
+        )
         
         return response.data
+    }
+    
+    public static func updateProject(projectId: String, name: String?, description: String?) async throws {
+        let queryItems: [URLQueryItem] = [
+            URLQueryItem(name: "name", value: name),
+            URLQueryItem(name: "description", value: description)
+        ]
+        
+        let _: EmptyResponseBody = try await OneSkyApiService.instance.apiClient.put(
+            OneSkyUrls.getProjectDetailsPath(forProjectId: projectId),
+            body: EmptyRequestBody(),
+            queryItems: queryItems
+        )
+    }
+    
+    public static func deleteProject(projectId: String) async throws {
+        let _: EmptyResponseBody = try await OneSkyApiService.instance.apiClient.delete(
+            OneSkyUrls.getProjectDetailsPath(forProjectId: projectId),
+            queryItems: nil
+        )
     }
 }
