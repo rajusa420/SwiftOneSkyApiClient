@@ -7,11 +7,6 @@
 
 import Foundation
 
-public struct ProjectTypeDataModel: Codable {
-    let code: String
-    let name: String
-}
-
 public struct ProjectDetailsDataModel: Codable {
     let id: Int
     let name: String

@@ -11,10 +11,12 @@ import OneSkyClient
 func fetchUpdates() async {
     // The project group id: 173959
     // The project id: 387918
-    let projectGroupListTask = Task { () -> [ProjectGroupSummaryDataModel] in
-        let projectGroupList = try await ProjectGroupRemoteDataSource.getProjectGroupList()
-        return projectGroupList
-    }
+    // The temp project id: 387995
+    
+//    let projectCreateTask = Task { () -> ProjectCreateSummaryDataModel in
+//        let projectCreateSummary = try await ProjectRemoteDataSource.createProject(inProjectGroupId: "173959", projectType: .iOS, name: "Raj's Test Project", description: "Just testing creating a project")
+//        return projectCreateSummary
+//    }
     
     let projectListSummaryTask = Task { () -> [ProjectSummaryDataModel] in
         let projectList = try await ProjectRemoteDataSource.getProjectList(forProjectGroupId: "173959")
@@ -27,11 +29,11 @@ func fetchUpdates() async {
     }
     
     do {
-        async let projectGroupList = projectGroupListTask.value
+        //async let projectCreateSummary = projectCreateTask.value
         async let projectList = projectListSummaryTask.value
         async let projectDetails = projectDetailsTask.value
         
-        print("Project group list: \(try await projectGroupList)")
+        //print("Project create summary: \(try await projectCreateSummary)")
         print("Project list: \(try await projectList)")
         print("Project details: \(try await projectDetails)")
     } catch let error as APIError {
