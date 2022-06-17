@@ -51,13 +51,12 @@
             ReferencedContainer = "container:OneSkyApiClient.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <AdditionalOptions>
-         <AdditionalOption
-            key = "NSZombieEnabled"
-            value = "YES"
+      <CommandLineArguments>
+         <CommandLineArgument
+            argument = "--secret-key-path /Users/rajusa/Rajusa/OneSkyApiClient/apikeys.plist"
             isEnabled = "YES">
-         </AdditionalOption>
-      </AdditionalOptions>
+         </CommandLineArgument>
+      </CommandLineArguments>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

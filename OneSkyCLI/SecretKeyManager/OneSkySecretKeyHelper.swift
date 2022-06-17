@@ -8,16 +8,16 @@
 import Foundation
 
 class OneSkySecretKeyHelper {
-    static func getApiKey() -> String {
-        guard let apiKey = SecretKeysManager.instance.getSecretKey(keyName: .oneSkyKey) else {
+    static func getApiKey() throws -> String {
+        guard let apiKey = try SecretKeysManager.instance.getSecretKey(keyName: .oneSkyPublicKey) else {
             fatalError("One sky api key not found! Please ensure the apikeys.plist file contains the key.")
         }
         
         return apiKey
     }
     
-    static func getApiSecret() -> String {
-        guard let apiSecret = SecretKeysManager.instance.getSecretKey(keyName: .oneSkySecret) else {
+    static func getApiSecret() throws -> String {
+        guard let apiSecret = try SecretKeysManager.instance.getSecretKey(keyName: .oneSkySecretKey) else {
             fatalError("One sky api secret not found! Please ensure the apikeys.plist file contains the secret.")
         }
         

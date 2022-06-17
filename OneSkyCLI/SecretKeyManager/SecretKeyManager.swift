@@ -7,27 +7,56 @@
 
 import Foundation
 
+
+public enum SecretKeyManagerError: Error {
+    case notInitialized
+    case invalidKeyName(message: String)
+    case failedToLoadSecretsFile(message: String)
+    case invalidSecretsFile(message: String)
+}
+
+extension SecretKeyManagerError: LocalizedError {
+    public var errorDescription: String? {
+        switch self {
+        case .notInitialized:
+            return "The client was not initialized with the api public and secret key."
+        case .invalidKeyName(let message):
+            return "Unexpected Error: \(message)"
+        case .failedToLoadSecretsFile(let message),
+             .invalidSecretsFile(let message):
+            return "Error: \(message)"
+        }
+    }
+}
+
 public enum SecretKeyName: String, CaseIterable {
-    case oneSkyKey = "onesky_key"
-    case oneSkySecret = "onesky_secret"
+    case oneSkyPublicKey = "onesky_public_key"
+    case oneSkySecretKey = "onesky_secret_key"
 }
 
 class SecretKeysManager {
     public static let instance = SecretKeysManager()
     private var secretsDictionary: [String: String] = [:]
+    private var keysInitialized = false
     
-    private init() {
-        loadSecretsPlist()
+    public func initialize(withSecretKeyFilePath secretKeyFilePath: String) throws {
+        try loadSecretsPlist(secretKeysPath: secretKeyFilePath)
+        keysInitialized = true
     }
     
-    private func loadSecretsPlist() {
-        guard case let secretKeysPath = "/Users/rajusa/Rajusa/OneSkyApiClient/apikeys.plist",
-              let loadedSecretsDictionary = NSDictionary(contentsOfFile: secretKeysPath) else {
-            fatalError("Unable to load api keys plist! Please ensure you have created an apikeys.plist file in the root of the project that contains the one sky api client key")
+    public func initialize(withPublicKey publicKey: String, secretKey: String) {
+        secretsDictionary[SecretKeyName.oneSkyPublicKey.rawValue] = publicKey
+        secretsDictionary[SecretKeyName.oneSkySecretKey.rawValue] = secretKey
+        keysInitialized = true
+    }
+    
+    private func loadSecretsPlist(secretKeysPath: String) throws {
+        guard let loadedSecretsDictionary = NSDictionary(contentsOfFile: secretKeysPath) else {
+            throw SecretKeyManagerError.failedToLoadSecretsFile(message: "Unable to load api keys plist! Please ensure you have created an apikeys.plist file in the root of the project that contains the one sky api client key")
         }
         
         guard loadedSecretsDictionary.count > 0 else {
-            fatalError("Api keys file contains no key/value pairs!")
+            throw SecretKeyManagerError.invalidSecretsFile(message: "Api keys file contains no key/value pairs!")
         }
         
         // Convert the NSDictionary to a swift Dictionary
@@ -37,9 +66,19 @@ class SecretKeysManager {
                 secretsDictionary[keyString] = value
             }
         }
+        
+        for secretKey in SecretKeyName.allCases {
+            if secretsDictionary[secretKey.rawValue] == nil {
+                throw SecretKeyManagerError.invalidSecretsFile(message: "Api keys file missing key: \(secretKey.rawValue)")
+            }
+        }
     }
     
-    func getSecretKey(keyName: SecretKeyName) -> String? {
+    func getSecretKey(keyName: SecretKeyName) throws -> String? {
+        guard keysInitialized else {
+            throw SecretKeyManagerError.notInitialized
+        }
+        
         let value = secretsDictionary[keyName.rawValue]
 //        if let value = value {
 //            AppLog.d("Returning Secret Key \(keyName.rawValue): \(value)")
@@ -50,11 +89,11 @@ class SecretKeysManager {
         return value
     }
     
-    private func getSecretKey(keyName: String) -> String? {
+    private func getSecretKey(keyName: String) throws -> String? {
         guard let key = SecretKeyName(rawValue: keyName) else {
-            fatalError("Invalid key name passed to get secret key!")
+            throw SecretKeyManagerError.invalidKeyName(message: "Invalid key name passed to get secret key: \(keyName)")
         }
         
-        return getSecretKey(keyName: key)
+        return try getSecretKey(keyName: key)
     }
 }
