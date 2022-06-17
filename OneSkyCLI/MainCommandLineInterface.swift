@@ -16,7 +16,7 @@ struct MainCommandLineInterface: AsyncParsableCommand {
         version: "0.0.1"
     )
 
-    @Option(help: "Path to the secret keys plist file. Requires the onesky_key and onesky_secret string entries in the dictionary.")
+    @Option(name: [.customLong("skp"), .long], help: "Path to the secret keys plist file. Requires the onesky_key and onesky_secret string entries in the dictionary.")
     var secretKeyPath: String?
 
     @Option(help: "One Sky Public Key")
