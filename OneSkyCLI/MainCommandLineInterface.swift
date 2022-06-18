@@ -25,6 +25,12 @@ struct MainCommandLineInterface: AsyncParsableCommand {
     @Option(help: "One Sky Secret Key")
     var secretKey: String?
     
+    @Option(help: "The Project group id")
+    var projectGroupId: String?
+    
+    @Option(help: "The project id")
+    var projectId: String?
+    
     mutating func validate() throws {
         guard secretKeyPath != nil || (publicKey != nil && secretKey != nil) else {
             throw ValidationError("Error: Missing client id and client secret. Either provide them as command line arguments or provide a path to a plist file that contains them")
@@ -43,16 +49,16 @@ struct MainCommandLineInterface: AsyncParsableCommand {
             apiSecret: try OneSkySecretKeyHelper.getApiSecret()
         )
 
-        await TaskExecutor().executeTask()
+        try await TaskExecutor().executeTask()
     }
 }
 
 class TaskExecutor {
-    @MainActor func executeTask() async {
-        await fetchUpdates()
+    @MainActor func executeTask() async throws {
+        try await fetchUpdates()
     }
     
-    private func fetchUpdates() async {
+    private func fetchUpdates() async throws  {
         // The project group id: 173959
         // The project id: 387918
         // The temp project id: 387995
@@ -75,21 +81,15 @@ class TaskExecutor {
             let projectDetails = try await ProjectRemoteDataSource.getDetails(forProjectId: "387995")
             return projectDetails
         }
+        
+        //async let projectCreateSummary = projectCreateTask.value
+        try await projectUpdateTask.value
+        async let projectList = projectListSummaryTask.value
+        async let projectDetails = projectDetailsTask.value
 
-        do {
-            //async let projectCreateSummary = projectCreateTask.value
-            try await projectUpdateTask.value
-            async let projectList = projectListSummaryTask.value
-            async let projectDetails = projectDetailsTask.value
-
-            //print("Project create summary: \(try await projectCreateSummary)")
-            print("Project list: \(try await projectList)")
-            print("Project details: \(try await projectDetails)")
-        } catch let error as APIError {
-            print("API error: \(error.getApiErrorMessage())")
-        } catch {
-            print("Error: \(error.localizedDescription)")
-        }
+        //print("Project create summary: \(try await projectCreateSummary)")
+        print("Project list: \(try await projectList)")
+        print("Project details: \(try await projectDetails)")
     }
 }
 

@@ -26,26 +26,28 @@ public enum APIError: Error {
     case decodingError(message: String)
     case badRequest(message: String)
     case requestComponentsParseError(message: String)
-    
-    public func getApiErrorMessage() -> String {
+}
+
+extension APIError: LocalizedError {
+    public var errorDescription: String? {
         switch self {
-        case .invalidBaseUrl(let message):
-            return "Invalid Base Url: \(message)"
-        case .unauthorized(let message):
-            return "User is Unauthorized: \(message)"
-        case .needsAuthentication(let message):
-            return "User requires authentication: \(message)"
-        case .generic(let message):
-            return "Api Error: \(message)"
-        case .encodingError(let message):
-            return "Error encoding body for API request: \(message)"
-        case .decodingError(let message):
-            return "Error decoding API response: \(message)"
-        case .badRequest(let message):
-            return "Bad request: \(message)"
-        case .requestComponentsParseError(let message):
-            return "Unable to parse request components: \(message)"
-        }
+            case .invalidBaseUrl(let message):
+                return "Invalid Base Url: \(message)"
+            case .unauthorized(let message):
+                return "User is Unauthorized: \(message)"
+            case .needsAuthentication(let message):
+                return "User requires authentication: \(message)"
+            case .generic(let message):
+                return "Api Error: \(message)"
+            case .encodingError(let message):
+                return "Error encoding body for API request: \(message)"
+            case .decodingError(let message):
+                return "Error decoding API response: \(message)"
+            case .badRequest(let message):
+                return "Bad request: \(message)"
+            case .requestComponentsParseError(let message):
+                return "Unable to parse request components: \(message)"
+            }
     }
 }
 
