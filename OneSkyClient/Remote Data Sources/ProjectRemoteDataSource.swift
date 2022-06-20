@@ -9,17 +9,17 @@ import Foundation
 
 open class ProjectRemoteDataSource {
     public static func getProjectList(forProjectGroupId projectGroupId: String) async throws -> [ProjectSummaryDataModel] {
-        let response: ProjectListResponseModel = try await OneSkyApiService.instance.apiClient.get(OneSkyUrls.getProjectListPath(forProjectGroupId: projectGroupId))
+        let response: ProjectListResponseModel = try await OneSkyApiService.get(OneSkyUrls.getProjectListPath(forProjectGroupId: projectGroupId))
         return response.data
     }
     
     public static func getDetails(forProjectId projectId: String) async throws -> ProjectDetailsDataModel {
-        let response: ProjectDetailsResponseModel = try await OneSkyApiService.instance.apiClient.get(OneSkyUrls.getProjectDetailsPath(forProjectId: projectId))
+        let response: ProjectDetailsResponseModel = try await OneSkyApiService.get(OneSkyUrls.getProjectDetailsPath(forProjectId: projectId))
         return response.data
     }
     
     public static func getLanguages(forProjectId projectId: String) async throws -> [ProjectLanguageDataModel] {
-        let response: ProjectLanguagesResponseModel = try await OneSkyApiService.instance.apiClient.get(OneSkyUrls.getProjectLanguagesPath(forProjectId: projectId))
+        let response: ProjectLanguagesResponseModel = try await OneSkyApiService.get(OneSkyUrls.getProjectLanguagesPath(forProjectId: projectId))
         return response.data
     }
     
@@ -33,7 +33,7 @@ open class ProjectRemoteDataSource {
             queryItems.append(URLQueryItem(name: "description", value: description))
         }
         
-        let response: ProjectCreateResponseModel = try await OneSkyApiService.instance.apiClient.post(
+        let response: ProjectCreateResponseModel = try await OneSkyApiService.post(
             OneSkyUrls.getProjectListPath(forProjectGroupId: projectGroupId),
             body: EmptyRequestBody(),
             queryItems: queryItems
@@ -48,7 +48,7 @@ open class ProjectRemoteDataSource {
             URLQueryItem(name: "description", value: description)
         ]
         
-        let _: EmptyResponseBody = try await OneSkyApiService.instance.apiClient.put(
+        let _: EmptyResponseBody = try await OneSkyApiService.put(
             OneSkyUrls.getProjectDetailsPath(forProjectId: projectId),
             body: EmptyRequestBody(),
             queryItems: queryItems
@@ -56,7 +56,7 @@ open class ProjectRemoteDataSource {
     }
     
     public static func deleteProject(projectId: String) async throws {
-        let _: EmptyResponseBody = try await OneSkyApiService.instance.apiClient.delete(
+        let _: EmptyResponseBody = try await OneSkyApiService.delete(
             OneSkyUrls.getProjectDetailsPath(forProjectId: projectId),
             queryItems: nil
         )

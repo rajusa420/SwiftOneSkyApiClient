@@ -9,7 +9,7 @@ import Foundation
 
 open class LocaleRemoteDataSource {
     public static func getLocaleList() async throws -> [LocaleSummaryDataModel] {
-        let response: LocaleSummaryResponseModel = try await OneSkyApiService.instance.apiClient.get(OneSkyUrls.getLocaleListPath())
+        let response: LocaleSummaryResponseModel = try await OneSkyApiService.get(OneSkyUrls.getLocaleListPath())
         return response.data
     }
 }

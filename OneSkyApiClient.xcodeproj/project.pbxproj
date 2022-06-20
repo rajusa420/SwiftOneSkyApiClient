@@ -56,6 +56,7 @@
 		1E5198732843F47A007C5A10 /* OneSkyAuthHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197FE283C0C46007C5A10 /* OneSkyAuthHelpers.swift */; };
 		1E5198742843F48F007C5A10 /* OneSkyUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519803283C9BB3007C5A10 /* OneSkyUrls.swift */; };
 		1EA7604D285CDEAC000BD4A9 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA7604C285CDEAC000BD4A9 /* ArgumentParser */; };
+		1EA7604F286112DE000BD4A9 /* LocaleFileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7604E286112DE000BD4A9 /* LocaleFileFormat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +143,7 @@
 		1E51984C2843F3C3007C5A10 /* OneSkyApiClientFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneSkyApiClientFramework.h; sourceTree = "<group>"; };
 		1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OneSkyApiClientFramework.docc; sourceTree = "<group>"; };
 		1EA7604A285CDDA8000BD4A9 /* OneSkyCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OneSkyCLI; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EA7604E286112DE000BD4A9 /* LocaleFileFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleFileFormat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +214,7 @@
 				1E1E9CE0284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift */,
 				1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */,
 				1E51983D2840B2EE007C5A10 /* LocaleSummaryDataModel.swift */,
+				1EA7604E286112DE000BD4A9 /* LocaleFileFormat.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				1E5198662843F45C007C5A10 /* ProjectFileUploadResponseModel.swift in Sources */,
 				1E5198672843F45C007C5A10 /* ProjectListResponseModel.swift in Sources */,
 				1E1E9CD7284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift in Sources */,
+				1EA7604F286112DE000BD4A9 /* LocaleFileFormat.swift in Sources */,
 				1E51985F2843F452007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */,
 				1E5198642843F45C007C5A10 /* StringFileListResponseModel.swift in Sources */,
 				1E5198562843F421007C5A10 /* ApiRequestBuilder.swift in Sources */,
