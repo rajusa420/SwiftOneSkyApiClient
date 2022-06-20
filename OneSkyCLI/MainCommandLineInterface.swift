@@ -113,7 +113,6 @@ class TaskSequence: AsyncSequence, AsyncIteratorProtocol {
     typealias Element = TaskResult
     var taskList: [OneSkyTask] = []
     
-    
     func next() async throws -> Element? {
         guard !taskList.isEmpty else {
             return nil

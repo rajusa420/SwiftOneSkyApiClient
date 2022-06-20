@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProjectFileListResponseModel: Codable {
-    let meta: ProjectFileListResponseMetaModel
+struct StringFileListResponseModel: Codable {
+    let meta: StringFileListResponseMetaModel
     let data: [ProjectFileDataModel]
 }

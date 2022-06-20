@@ -37,7 +37,7 @@ class OneSkyUrls {
         return "projects/\(projectId)/languages"
     }
     
-    public static func getProjectFilesPath(forProjectId projectId: String) -> String {
+    public static func getStringFilesPath(forProjectId projectId: String) -> String {
         return "projects/\(projectId)/files"
     }
     

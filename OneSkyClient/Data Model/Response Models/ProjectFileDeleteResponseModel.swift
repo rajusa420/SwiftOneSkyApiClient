@@ -8,6 +8,6 @@
 import Foundation
 
 struct ProjectFileDeleteResponseModel: Codable {
-    let meta: ProjectFileListResponseMetaModel
+    let meta: StringFileListResponseMetaModel
     let data: ProjectFileDeleteSummaryDataModel
 }

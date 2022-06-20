@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProjectFileListResponseMetaModel: Codable {
+struct StringFileListResponseMetaModel: Codable {
     let status: Int
     let record_count: Int
     let page_count: Int

@@ -7,9 +7,9 @@
 
 import Foundation
 
-open class ProjectFileRemoteDataSource {
+open class StringFileRemoteDataSource {
     public static func getUploadedFileList(forProjectId projectId: String) async throws -> [ProjectFileDataModel] {
-        let response: ProjectFileListResponseModel = try await OneSkyApiService.instance.apiClient.get(OneSkyUrls.getProjectFilesPath(forProjectId: projectId))
+        let response: StringFileListResponseModel = try await OneSkyApiService.instance.apiClient.get(OneSkyUrls.getStringFilesPath(forProjectId: projectId))
         return response.data
     }
 }

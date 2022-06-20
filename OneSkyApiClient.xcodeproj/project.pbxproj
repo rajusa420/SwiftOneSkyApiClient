@@ -27,18 +27,18 @@
 		1E5198562843F421007C5A10 /* ApiRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */; };
 		1E5198572843F421007C5A10 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EA28355638007C5A10 /* ApiError.swift */; };
 		1E5198582843F43B007C5A10 /* LocaleRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51983F2840F49F007C5A10 /* LocaleRemoteDataSource.swift */; };
-		1E5198592843F43B007C5A10 /* ProjectFileRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981D283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift */; };
+		1E5198592843F43B007C5A10 /* StringFileRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981D283FBA2D007C5A10 /* StringFileRemoteDataSource.swift */; };
 		1E51985A2843F43B007C5A10 /* ProjectGroupRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */; };
 		1E51985B2843F43B007C5A10 /* ProjectRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */; };
 		1E51985C2843F452007C5A10 /* ProjectListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519831283FDF98007C5A10 /* ProjectListResponseMetaModel.swift */; };
-		1E51985D2843F452007C5A10 /* ProjectFileListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519835283FE085007C5A10 /* ProjectFileListResponseMetaModel.swift */; };
+		1E51985D2843F452007C5A10 /* StringFileListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519835283FE085007C5A10 /* StringFileListResponseMetaModel.swift */; };
 		1E51985E2843F452007C5A10 /* ProjectLanguagesResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519837283FE0B5007C5A10 /* ProjectLanguagesResponseMetaModel.swift */; };
 		1E51985F2843F452007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198432840FA35007C5A10 /* ProjectFileUploadMetaModel.swift */; };
 		1E5198602843F452007C5A10 /* ProjectDetailsResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519833283FE011007C5A10 /* ProjectDetailsResponseMetaModel.swift */; };
 		1E5198612843F452007C5A10 /* AuthorizationErrorMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51982D283FDEEC007C5A10 /* AuthorizationErrorMetaModel.swift */; };
 		1E5198622843F452007C5A10 /* ProjectGroupListResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51982F283FDF2D007C5A10 /* ProjectGroupListResponseMetaModel.swift */; };
 		1E5198632843F45C007C5A10 /* AuthorizationErrorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */; };
-		1E5198642843F45C007C5A10 /* ProjectFileListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */; };
+		1E5198642843F45C007C5A10 /* StringFileListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981F283FBAF6007C5A10 /* StringFileListResponseModel.swift */; };
 		1E5198652843F45C007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */; };
 		1E5198662843F45C007C5A10 /* ProjectFileUploadResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseModel.swift */; };
 		1E5198672843F45C007C5A10 /* ProjectListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */; };
@@ -120,8 +120,8 @@
 		1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListResponseModel.swift; sourceTree = "<group>"; };
 		1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsResponseModel.swift; sourceTree = "<group>"; };
 		1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLanguagesResponseModel.swift; sourceTree = "<group>"; };
-		1E51981D283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileRemoteDataSource.swift; sourceTree = "<group>"; };
-		1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileListResponseModel.swift; sourceTree = "<group>"; };
+		1E51981D283FBA2D007C5A10 /* StringFileRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFileRemoteDataSource.swift; sourceTree = "<group>"; };
+		1E51981F283FBAF6007C5A10 /* StringFileListResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFileListResponseModel.swift; sourceTree = "<group>"; };
 		1E519823283FDCDA007C5A10 /* ProjectGroupSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E519825283FDD0F007C5A10 /* ProjectSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E519827283FDD5B007C5A10 /* ProjectDetailsDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsDataModel.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		1E51982F283FDF2D007C5A10 /* ProjectGroupListResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectGroupListResponseMetaModel.swift; sourceTree = "<group>"; };
 		1E519831283FDF98007C5A10 /* ProjectListResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListResponseMetaModel.swift; sourceTree = "<group>"; };
 		1E519833283FE011007C5A10 /* ProjectDetailsResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetailsResponseMetaModel.swift; sourceTree = "<group>"; };
-		1E519835283FE085007C5A10 /* ProjectFileListResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileListResponseMetaModel.swift; sourceTree = "<group>"; };
+		1E519835283FE085007C5A10 /* StringFileListResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFileListResponseMetaModel.swift; sourceTree = "<group>"; };
 		1E519837283FE0B5007C5A10 /* ProjectLanguagesResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectLanguagesResponseMetaModel.swift; sourceTree = "<group>"; };
 		1E5198392840AF1B007C5A10 /* ProjectFileImportSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileImportSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileFormat.swift; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 			children = (
 				1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */,
 				1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */,
-				1E51981D283FBA2D007C5A10 /* ProjectFileRemoteDataSource.swift */,
+				1E51981D283FBA2D007C5A10 /* StringFileRemoteDataSource.swift */,
 				1E51983F2840F49F007C5A10 /* LocaleRemoteDataSource.swift */,
 			);
 			path = "Remote Data Sources";
@@ -260,7 +260,7 @@
 				1E1E9CD6284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift */,
 				1E519817283D4EBC007C5A10 /* ProjectListResponseModel.swift */,
 				1E519819283D56ED007C5A10 /* ProjectDetailsResponseModel.swift */,
-				1E51981F283FBAF6007C5A10 /* ProjectFileListResponseModel.swift */,
+				1E51981F283FBAF6007C5A10 /* StringFileListResponseModel.swift */,
 				1E51981B283DD42B007C5A10 /* ProjectLanguagesResponseModel.swift */,
 				1E519810283CF7D8007C5A10 /* AuthorizationErrorResponseModel.swift */,
 				1E5198412840F9FE007C5A10 /* ProjectFileUploadResponseModel.swift */,
@@ -277,7 +277,7 @@
 				1E519831283FDF98007C5A10 /* ProjectListResponseMetaModel.swift */,
 				1E51982F283FDF2D007C5A10 /* ProjectGroupListResponseMetaModel.swift */,
 				1E519833283FE011007C5A10 /* ProjectDetailsResponseMetaModel.swift */,
-				1E519835283FE085007C5A10 /* ProjectFileListResponseMetaModel.swift */,
+				1E519835283FE085007C5A10 /* StringFileListResponseMetaModel.swift */,
 				1E519837283FE0B5007C5A10 /* ProjectLanguagesResponseMetaModel.swift */,
 				1E5198432840FA35007C5A10 /* ProjectFileUploadMetaModel.swift */,
 				1E1E9CDE284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift */,
@@ -427,7 +427,7 @@
 				1E5198742843F48F007C5A10 /* OneSkyUrls.swift in Sources */,
 				1E1E9CCC2843FB8A002E0E87 /* OneSkyClient.swift in Sources */,
 				1E5198542843F421007C5A10 /* OneSkyApiService.swift in Sources */,
-				1E51985D2843F452007C5A10 /* ProjectFileListResponseMetaModel.swift in Sources */,
+				1E51985D2843F452007C5A10 /* StringFileListResponseMetaModel.swift in Sources */,
 				1E1E9CD9284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift in Sources */,
 				1E5198682843F45C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */,
 				1E5198582843F43B007C5A10 /* LocaleRemoteDataSource.swift in Sources */,
@@ -447,7 +447,7 @@
 				1E5198672843F45C007C5A10 /* ProjectListResponseModel.swift in Sources */,
 				1E1E9CD7284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift in Sources */,
 				1E51985F2843F452007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */,
-				1E5198642843F45C007C5A10 /* ProjectFileListResponseModel.swift in Sources */,
+				1E5198642843F45C007C5A10 /* StringFileListResponseModel.swift in Sources */,
 				1E5198562843F421007C5A10 /* ApiRequestBuilder.swift in Sources */,
 				1E1E9CE1284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift in Sources */,
 				1E51985E2843F452007C5A10 /* ProjectLanguagesResponseMetaModel.swift in Sources */,
@@ -456,7 +456,7 @@
 				1E5198702843F465007C5A10 /* ProjectDetailsDataModel.swift in Sources */,
 				1E51986E2843F465007C5A10 /* LocaleSummaryDataModel.swift in Sources */,
 				1E5198692843F45C007C5A10 /* ProjectDetailsResponseModel.swift in Sources */,
-				1E5198592843F43B007C5A10 /* ProjectFileRemoteDataSource.swift in Sources */,
+				1E5198592843F43B007C5A10 /* StringFileRemoteDataSource.swift in Sources */,
 				1E1E9CDF284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift in Sources */,
 				1E5198612843F452007C5A10 /* AuthorizationErrorMetaModel.swift in Sources */,
 				1E5198722843F47A007C5A10 /* MD5Helper.swift in Sources */,
