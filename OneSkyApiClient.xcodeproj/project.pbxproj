@@ -12,7 +12,7 @@
 		1E1E9CD328442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */; };
 		1E1E9CD52844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD42844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift */; };
 		1E1E9CD7284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD6284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift */; };
-		1E1E9CD9284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD8284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift */; };
+		1E1E9CD9284427B9002E0E87 /* StringFileUploadSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CD8284427B9002E0E87 /* StringFileUploadSummaryDataModel.swift */; };
 		1E1E9CDB284CE10C002E0E87 /* ProjectTypeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CDA284CE10C002E0E87 /* ProjectTypeDataModel.swift */; };
 		1E1E9CDD284CE20C002E0E87 /* ProjectCreateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CDC284CE20C002E0E87 /* ProjectCreateResponseModel.swift */; };
 		1E1E9CDF284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CDE284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift */; };
@@ -98,7 +98,7 @@
 		1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileDeleteSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E1E9CD42844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileDeleteResponseMetaModel.swift; sourceTree = "<group>"; };
 		1E1E9CD6284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileDeleteResponseModel.swift; sourceTree = "<group>"; };
-		1E1E9CD8284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileUploadSummaryDataModel.swift; sourceTree = "<group>"; };
+		1E1E9CD8284427B9002E0E87 /* StringFileUploadSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFileUploadSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E1E9CDA284CE10C002E0E87 /* ProjectTypeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTypeDataModel.swift; sourceTree = "<group>"; };
 		1E1E9CDC284CE20C002E0E87 /* ProjectCreateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreateResponseModel.swift; sourceTree = "<group>"; };
 		1E1E9CDE284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreateResponseMetaModel.swift; sourceTree = "<group>"; };
@@ -210,7 +210,7 @@
 				1E51982B283FDDEE007C5A10 /* ProjectLanguageDataModel.swift */,
 				1E5198392840AF1B007C5A10 /* ProjectFileImportSummaryDataModel.swift */,
 				1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */,
-				1E1E9CD8284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift */,
+				1E1E9CD8284427B9002E0E87 /* StringFileUploadSummaryDataModel.swift */,
 				1E1E9CE0284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift */,
 				1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */,
 				1E51983D2840B2EE007C5A10 /* LocaleSummaryDataModel.swift */,
@@ -431,7 +431,7 @@
 				1E1E9CCC2843FB8A002E0E87 /* OneSkyClient.swift in Sources */,
 				1E5198542843F421007C5A10 /* OneSkyApiService.swift in Sources */,
 				1E51985D2843F452007C5A10 /* StringFileListResponseMetaModel.swift in Sources */,
-				1E1E9CD9284427B9002E0E87 /* ProjectFileUploadSummaryDataModel.swift in Sources */,
+				1E1E9CD9284427B9002E0E87 /* StringFileUploadSummaryDataModel.swift in Sources */,
 				1E5198682843F45C007C5A10 /* ProjectGroupListResponseModel.swift in Sources */,
 				1E5198582843F43B007C5A10 /* LocaleRemoteDataSource.swift in Sources */,
 				1E5198712843F465007C5A10 /* ProjectSummaryDataModel.swift in Sources */,

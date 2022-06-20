@@ -13,7 +13,7 @@ open class StringFileRemoteDataSource {
         return response.data
     }
     
-    public static func getUploadFilePath(forProjectId projectId: String, fileName: String, fileFormat: String, locale: LocaleFileFormat) {
+    public static func uploadFile(forProjectId projectId: String, fileName: String, fileFormat: String, locale: LocaleFileFormat) {
         
     }
 }
