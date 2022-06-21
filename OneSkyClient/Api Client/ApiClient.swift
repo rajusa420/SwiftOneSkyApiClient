@@ -107,13 +107,13 @@ class ApiClient {
                 return data
     
             case 401:
-                throw APIError.needsAuthentication(message: "User required authentication: \(httpResponse.statusCode)")
+                throw APIError.needsAuthentication(message: String(format: NSLocalizedString("User required authentication: %d", comment: ""), httpResponse.statusCode))
             
             case 403:
-            throw APIError.unauthorized(message: "User not authorized for this request: \(httpResponse.statusCode)")
+                throw APIError.unauthorized(message: String(format: NSLocalizedString("User not authorized for this request: %d", comment: ""), httpResponse.statusCode))
             
             default:
-                throw APIError.generic(message: "Request failed (code: \(httpResponse.statusCode)). \(httpResponse.description)")
+                throw APIError.generic(message: String(format: NSLocalizedString("Request failed (code:  %d). %@", comment: ""), httpResponse.statusCode, httpResponse.description))
         }
     }
     
@@ -122,7 +122,7 @@ class ApiClient {
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         
         guard let httpResponse = response as? HTTPURLResponse else {
-            throw APIError.generic(message: "Invalid response received for API Request")
+            throw APIError.generic(message: NSLocalizedString("Invalid response received for API Request", comment: ""))
         }
         
         return try await handleResponse(data: data, httpResponse: httpResponse)

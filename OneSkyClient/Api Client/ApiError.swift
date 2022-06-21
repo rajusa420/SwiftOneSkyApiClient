@@ -32,21 +32,21 @@ extension APIError: LocalizedError {
     public var errorDescription: String? {
         switch self {
             case .invalidBaseUrl(let message):
-                return "Invalid Base Url: \(message)"
+                return String(format: NSLocalizedString("Invalid Base Url: %@", comment: ""), message)
             case .unauthorized(let message):
-                return "User is Unauthorized: \(message)"
+                return String(format: NSLocalizedString("User is Unauthorized: %@", comment: ""), message)
             case .needsAuthentication(let message):
-                return "User requires authentication: \(message)"
+                return String(format: NSLocalizedString("User requires authentication: %@", comment: ""), message)
             case .generic(let message):
-                return "Api Error: \(message)"
+                return String(format: NSLocalizedString("Api Error: %@", comment: ""), message)
             case .encodingError(let message):
-                return "Error encoding body for API request: \(message)"
+                return String(format: NSLocalizedString("Error encoding body for API request: %@", comment: ""), message)
             case .decodingError(let message):
-                return "Error decoding API response: \(message)"
+                return String(format: NSLocalizedString("Error decoding API response: %@", comment: ""), message)
             case .badRequest(let message):
-                return "Bad request: \(message)"
+                return String(format: NSLocalizedString("Bad request: %@", comment: ""), message)
             case .requestComponentsParseError(let message):
-                return "Unable to parse request components: \(message)"
+                return String(format: NSLocalizedString("Unable to parse request components: %@", comment: ""), message)
             }
     }
 }

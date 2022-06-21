@@ -57,6 +57,9 @@
 		1E5198742843F48F007C5A10 /* OneSkyUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519803283C9BB3007C5A10 /* OneSkyUrls.swift */; };
 		1EA7604D285CDEAC000BD4A9 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA7604C285CDEAC000BD4A9 /* ArgumentParser */; };
 		1EA7604F286112DE000BD4A9 /* LocaleFileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7604E286112DE000BD4A9 /* LocaleFileFormat.swift */; };
+		1EA7605128611B8A000BD4A9 /* TaskSequenceExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7605028611B8A000BD4A9 /* TaskSequenceExecutor.swift */; };
+		1EA7605428613D8D000BD4A9 /* ANSIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7605328613D8D000BD4A9 /* ANSIColor.swift */; };
+		1EA7605628613F02000BD4A9 /* String+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7605528613F02000BD4A9 /* String+Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -144,6 +147,9 @@
 		1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = OneSkyApiClientFramework.docc; sourceTree = "<group>"; };
 		1EA7604A285CDDA8000BD4A9 /* OneSkyCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OneSkyCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA7604E286112DE000BD4A9 /* LocaleFileFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleFileFormat.swift; sourceTree = "<group>"; };
+		1EA7605028611B8A000BD4A9 /* TaskSequenceExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSequenceExecutor.swift; sourceTree = "<group>"; };
+		1EA7605328613D8D000BD4A9 /* ANSIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANSIColor.swift; sourceTree = "<group>"; };
+		1EA7605528613F02000BD4A9 /* String+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Color.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +185,10 @@
 		1E5197DF283551AD007C5A10 /* OneSkyCLI */ = {
 			isa = PBXGroup;
 			children = (
+				1EA7605228613D5B000BD4A9 /* CLI Colors */,
 				1E5197ED283A6941007C5A10 /* SecretKeyManager */,
 				1E5197E0283551AD007C5A10 /* MainCommandLineInterface.swift */,
+				1EA7605028611B8A000BD4A9 /* TaskSequenceExecutor.swift */,
 			);
 			path = OneSkyCLI;
 			sourceTree = "<group>";
@@ -303,6 +311,15 @@
 			path = OneSkyClient;
 			sourceTree = "<group>";
 		};
+		1EA7605228613D5B000BD4A9 /* CLI Colors */ = {
+			isa = PBXGroup;
+			children = (
+				1EA7605328613D8D000BD4A9 /* ANSIColor.swift */,
+				1EA7605528613F02000BD4A9 /* String+Color.swift */,
+			);
+			path = "CLI Colors";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -412,6 +429,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EA7605428613D8D000BD4A9 /* ANSIColor.swift in Sources */,
+				1EA7605128611B8A000BD4A9 /* TaskSequenceExecutor.swift in Sources */,
+				1EA7605628613F02000BD4A9 /* String+Color.swift in Sources */,
 				1E5197E1283551AD007C5A10 /* MainCommandLineInterface.swift in Sources */,
 				1E1E9CCE2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift in Sources */,
 				1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */,
