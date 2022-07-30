@@ -56,6 +56,7 @@
 		1E5198732843F47A007C5A10 /* OneSkyAuthHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197FE283C0C46007C5A10 /* OneSkyAuthHelpers.swift */; };
 		1E5198742843F48F007C5A10 /* OneSkyUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E519803283C9BB3007C5A10 /* OneSkyUrls.swift */; };
 		1E62741C2895CE4B00447471 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1E62741E2895CE4B00447471 /* Localizable.strings */; };
+		1E6274232895DAF500447471 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6274222895DAF500447471 /* Locale.swift */; };
 		1EA7604D285CDEAC000BD4A9 /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1EA7604C285CDEAC000BD4A9 /* ArgumentParser */; };
 		1EA7604F286112DE000BD4A9 /* LocaleFileFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7604E286112DE000BD4A9 /* LocaleFileFormat.swift */; };
 		1EA7605128611B8A000BD4A9 /* TaskSequenceExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7605028611B8A000BD4A9 /* TaskSequenceExecutor.swift */; };
@@ -152,6 +153,7 @@
 		1E62741D2895CE4B00447471 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1E62741F2895CE4C00447471 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1E6274202895CE5000447471 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1E6274222895DAF500447471 /* Locale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 		1EA7604A285CDDA8000BD4A9 /* OneSkyCLI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OneSkyCLI; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EA7604E286112DE000BD4A9 /* LocaleFileFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocaleFileFormat.swift; sourceTree = "<group>"; };
 		1EA7605028611B8A000BD4A9 /* TaskSequenceExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSequenceExecutor.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		1E5197EC2836B548007C5A10 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				1E6274212895DAD800447471 /* Locales */,
 				1E519822283FDCA0007C5A10 /* Response Meta Models */,
 				1E519821283FDC8F007C5A10 /* Response Models */,
 				1E519823283FDCDA007C5A10 /* ProjectGroupSummaryDataModel.swift */,
@@ -318,6 +321,14 @@
 				1E62741E2895CE4B00447471 /* Localizable.strings */,
 			);
 			path = OneSkyClient;
+			sourceTree = "<group>";
+		};
+		1E6274212895DAD800447471 /* Locales */ = {
+			isa = PBXGroup;
+			children = (
+				1E6274222895DAF500447471 /* Locale.swift */,
+			);
+			path = Locales;
 			sourceTree = "<group>";
 		};
 		1EA7605228613D5B000BD4A9 /* CLI Colors */ = {
@@ -473,6 +484,7 @@
 				1E5198732843F47A007C5A10 /* OneSkyAuthHelpers.swift in Sources */,
 				1E1E9CD52844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift in Sources */,
 				1E1E9CDB284CE10C002E0E87 /* ProjectTypeDataModel.swift in Sources */,
+				1E6274232895DAF500447471 /* Locale.swift in Sources */,
 				1E51986D2843F465007C5A10 /* ProjectFileDataModel.swift in Sources */,
 				1E51986F2843F465007C5A10 /* ProjectFileFormat.swift in Sources */,
 				1E5198652843F45C007C5A10 /* ProjectLanguagesResponseModel.swift in Sources */,
