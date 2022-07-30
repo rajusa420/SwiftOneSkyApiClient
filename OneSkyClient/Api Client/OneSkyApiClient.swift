@@ -42,15 +42,15 @@ class OneSkyApiClient: ApiClient {
     
     override func handleResponse(data: Data, httpResponse: HTTPURLResponse) async throws -> Data {
         switch httpResponse.statusCode {
-            case 200..<300:
+            case 200 ..< 300:
                 return data
     
             case 401:
                 let authErrorResponse: AuthorizationErrorResponseModel = try await decodeResponse(data: data)
-            throw APIError.needsAuthentication(message: "User requires authentication: \(authErrorResponse.message)")
+                throw APIError.needsAuthentication(message: "User requires authentication: \(authErrorResponse.message)")
             
             case 403:
-            throw APIError.unauthorized(message: "User not authorized for this request: \(httpResponse.statusCode)")
+                throw APIError.unauthorized(message: "User not authorized for this request: \(httpResponse.statusCode)")
             
             default:
                 throw APIError.generic(message: "Request failed (code: \(httpResponse.statusCode)). \(httpResponse.description)")

@@ -7,11 +7,9 @@
 
 import Foundation
 
-struct EmptyRequestBody: Codable {
-}
+struct EmptyRequestBody: Codable {}
 
-struct EmptyResponseBody: Codable {
-}
+struct EmptyResponseBody: Codable {}
 
 class ApiClient {
     var baseURL: String
@@ -21,7 +19,7 @@ class ApiClient {
     }
     
     func buildRequest(_ path: String, _ requestMethod: APIRequestMethod, body: Data? = nil, queryItems: [URLQueryItem]? = nil, contentType: ContentType = .applicationJson) async throws -> URLRequest {
-        try await APIRequestBuilder(method: requestMethod, baseUrl: self.baseURL, path: path)
+        try await APIRequestBuilder(method: requestMethod, baseUrl: baseURL, path: path)
             .addQueryParams(queryItems)
             .addHeaderField(.contentType, contentType: contentType)
             .addHeaderField(.acceptType, contentType: .applicationJson)
@@ -71,8 +69,7 @@ class ApiClient {
                 encoder.dateEncodingStrategy = .iso8601
                 let data = try encoder.encode(body)
                 continuation.resume(returning: data)
-            }
-            catch {
+            } catch {
                 continuation.resume(throwing: APIError.encodingError(message: error.localizedDescription))
             }
         }
@@ -103,7 +100,7 @@ class ApiClient {
     
     func handleResponse(data: Data, httpResponse: HTTPURLResponse) async throws -> Data {
         switch httpResponse.statusCode {
-            case 200..<300:
+            case 200 ..< 300:
                 return data
     
             case 401:
@@ -128,5 +125,3 @@ class ApiClient {
         return try await handleResponse(data: data, httpResponse: httpResponse)
     }
 }
-
-

@@ -47,7 +47,7 @@ extension APIError: LocalizedError {
                 return String(format: NSLocalizedString("Bad request: %@", comment: ""), message)
             case .requestComponentsParseError(let message):
                 return String(format: NSLocalizedString("Unable to parse request components: %@", comment: ""), message)
-            }
+        }
     }
 }
 

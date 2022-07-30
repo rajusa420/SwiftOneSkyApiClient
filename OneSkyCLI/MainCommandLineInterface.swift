@@ -5,9 +5,9 @@
 //  Created by Raj Sathianarayanan on 5/18/22.
 //
 
+import ArgumentParser
 import Foundation
 import OneSkyClient
-import ArgumentParser
 
 @main
 struct MainCommandLineInterface: AsyncParsableCommand {
@@ -51,11 +51,11 @@ struct MainCommandLineInterface: AsyncParsableCommand {
             throw ValidationError("Error: Missing client id and client secret. Either provide them as command line arguments or provide a path to a plist file that contains them.")
         }
         
-        if (details || update) && projectId == nil {
+        if details || update, projectId == nil {
             throw ValidationError("Error: Project id required.")
         }
         
-        if list && projectGroupId == nil {
+        if list, projectGroupId == nil {
             throw ValidationError("Error: Project group id required.")
         }
     }
@@ -96,8 +96,7 @@ struct MainCommandLineInterface: AsyncParsableCommand {
         let taskSequence = buildTasksFromCommandLineArguments()
         do {
             try await TaskSequenceExecutor().executeTasks(taskSequence: taskSequence)
-        }
-        catch {
+        } catch {
             print(error.localizedDescription.redColored)
         }
     }

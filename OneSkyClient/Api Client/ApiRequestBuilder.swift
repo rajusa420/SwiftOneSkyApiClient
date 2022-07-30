@@ -19,12 +19,12 @@ public enum ContentType: String {
     case multipartFormData = "multipart/form-data"
 }
 
-extension URLRequest {
-    public mutating func setValue(_ value: String?, forHTTPHeaderField field: APIHeaderField) {
+public extension URLRequest {
+    mutating func setValue(_ value: String?, forHTTPHeaderField field: APIHeaderField) {
         setValue(value, forHTTPHeaderField: field.rawValue)
     }
     
-    public mutating func addValue(_ value: String, forHTTPHeaderField field: APIHeaderField) {
+    mutating func addValue(_ value: String, forHTTPHeaderField field: APIHeaderField) {
         addValue(value, forHTTPHeaderField: field.rawValue)
     }
 }
@@ -55,14 +55,14 @@ class APIRequestBuilder {
     
     func addAuthToken(_ token: String?) -> APIRequestBuilder {
         if let token = token {
-            self.authToken = token
+            authToken = token
         }
         return self
     }
     
     func addQueryParam(_ queryParam: URLQueryItem?) -> APIRequestBuilder {
         if let queryParam = queryParam {
-            self.queryParams.append(queryParam)
+            queryParams.append(queryParam)
         }
         return self
     }
@@ -86,8 +86,8 @@ class APIRequestBuilder {
     }
     
     func build() async throws -> URLRequest {
-        guard var url = URL(string: self.baseUrl) else {
-            throw APIError.invalidBaseUrl(message: self.baseUrl)
+        guard var url = URL(string: baseUrl) else {
+            throw APIError.invalidBaseUrl(message: baseUrl)
         }
         
         url.appendPathComponent(path)
@@ -101,8 +101,8 @@ class APIRequestBuilder {
         }
         
         var request = URLRequest(url: urlWithParams)
-        request.timeoutInterval = self.timeOutInterval
-        request.httpMethod = self.method.rawValue
+        request.timeoutInterval = timeOutInterval
+        request.httpMethod = method.rawValue
         
         if let body = body {
             request.httpBody = body
