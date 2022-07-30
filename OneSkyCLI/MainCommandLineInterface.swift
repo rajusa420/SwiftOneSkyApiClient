@@ -12,7 +12,7 @@ import OneSkyClient
 @main
 struct MainCommandLineInterface: AsyncParsableCommand {
     static var configuration = CommandConfiguration(
-        abstract: "One Sky Api Command Line Interface allows you to hit the one sky api from the command line.",
+        abstract: NSLocalizedString("One Sky Api Command Line Interface allows you to hit the one sky api from the command line.", comment: ""),
         version: "0.0.1"
     )
 
@@ -48,15 +48,15 @@ struct MainCommandLineInterface: AsyncParsableCommand {
     
     mutating func validate() throws {
         guard secretKeyPath != nil || (publicKey != nil && secretKey != nil) else {
-            throw ValidationError("Error: Missing client id and client secret. Either provide them as command line arguments or provide a path to a plist file that contains them.")
+            throw ValidationError(NSLocalizedString("Error: Missing client id and client secret. Either provide them as command line arguments or provide a path to a plist file that contains them.", comment: ""))
         }
         
         if details || update, projectId == nil {
-            throw ValidationError("Error: Project id required.")
+            throw ValidationError(NSLocalizedString("Error: Project id required.", comment: ""))
         }
         
         if list, projectGroupId == nil {
-            throw ValidationError("Error: Project group id required.")
+            throw ValidationError(NSLocalizedString("Error: Project group id required.", comment: ""))
         }
     }
     

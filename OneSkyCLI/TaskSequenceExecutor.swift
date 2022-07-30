@@ -63,7 +63,6 @@ class TaskSequence: AsyncSequence, AsyncIteratorProtocol {
 }
 
 class TaskSequenceExecutor {
-    
     @MainActor func executeTasks(taskSequence: TaskSequence) async throws {
         // The project group id: 173959
         // The project id: 387918
@@ -77,11 +76,11 @@ class TaskSequenceExecutor {
     private func displayTaskResultSummary(taskResult: TaskResult) {
         switch taskResult {
         case .emptyResult:
-            print("Task had an empty result.".greenColored)
+            print(NSLocalizedString("Task had an empty result.", comment: "").greenColored)
         case .projectListResult(let projectListSummary):
-            print("The project list summary: \(projectListSummary)".greenColored)
+            print(NSLocalizedString("The project list summary: \(projectListSummary)", comment: "").greenColored)
         case .projectDetailsResult(let projectDetails):
-            print("The project details: \(projectDetails)".cyanColored)
+            print(NSLocalizedString("The project details: \(projectDetails)", comment: "").cyanColored)
         }
     }
 }

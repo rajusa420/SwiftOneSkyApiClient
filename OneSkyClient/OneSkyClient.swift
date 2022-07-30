@@ -20,7 +20,7 @@ public class OneSkyClient {
     
     func getApiKey() -> String {
         guard let apiKey = apiKey else {
-            fatalError("Api key has not been initialized!")
+            fatalError(NSLocalizedString("Api key has not been initialized!", comment: ""))
         }
 
         return apiKey
@@ -28,7 +28,7 @@ public class OneSkyClient {
     
     func getApiSecret() -> String {
         guard let apiSecret = apiSecret else {
-            fatalError("Api secret has not been initialized!")
+            fatalError(NSLocalizedString("Api secret has not been initialized!", comment: ""))
         }
         
         return apiSecret

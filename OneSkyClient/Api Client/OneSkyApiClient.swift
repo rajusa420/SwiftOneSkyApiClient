@@ -47,13 +47,13 @@ class OneSkyApiClient: ApiClient {
     
             case 401:
                 let authErrorResponse: AuthorizationErrorResponseModel = try await decodeResponse(data: data)
-                throw APIError.needsAuthentication(message: "User requires authentication: \(authErrorResponse.message)")
+                throw APIError.needsAuthentication(message: NSLocalizedString("User requires authentication: \(authErrorResponse.message)", comment: ""))
             
             case 403:
-                throw APIError.unauthorized(message: "User not authorized for this request: \(httpResponse.statusCode)")
+                throw APIError.unauthorized(message: NSLocalizedString("User not authorized for this request: \(httpResponse.statusCode)", comment: ""))
             
             default:
-                throw APIError.generic(message: "Request failed (code: \(httpResponse.statusCode)). \(httpResponse.description)")
+                throw APIError.generic(message: NSLocalizedString("Request failed (code: \(httpResponse.statusCode)). \(httpResponse.description)", comment: ""))
         }
     }
 }
