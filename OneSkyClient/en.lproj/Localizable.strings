@@ -1,7 +1,71 @@
-/* 
-  Localizable.strings
-  OneSkyApiClient
+/* No comment provided by engineer. */
+"Api Error: %@" = "";
 
-  Created by Raj Sathianarayanan on 7/30/22.
-  
-*/
+/* No comment provided by engineer. */
+"Api key has not been initialized!" = "";
+
+/* No comment provided by engineer. */
+"Api secret has not been initialized!" = "";
+
+/* No comment provided by engineer. */
+"Bad request: %@" = "";
+
+/* No comment provided by engineer. */
+"Error decoding API response: %@" = "";
+
+/* No comment provided by engineer. */
+"Error encoding body for API request: %@" = "";
+
+/* No comment provided by engineer. */
+"Error: Missing client id and client secret. Either provide them as command line arguments or provide a path to a plist file that contains them." = "";
+
+/* No comment provided by engineer. */
+"Error: Project group id required." = "";
+
+/* No comment provided by engineer. */
+"Error: Project id required." = "";
+
+/* No comment provided by engineer. */
+"Invalid Base Url: %@" = "";
+
+/* No comment provided by engineer. */
+"Invalid response received for API Request" = "";
+
+/* No comment provided by engineer. */
+"One Sky Api Command Line Interface allows you to hit the one sky api from the command line." = "";
+
+/* No comment provided by engineer. */
+"Request failed (code:  %d). %@" = "";
+
+/* No comment provided by engineer. */
+"Request failed (code: \(httpResponse.statusCode)). \(httpResponse.description)" = "";
+
+/* No comment provided by engineer. */
+"Task had an empty result." = "";
+
+/* No comment provided by engineer. */
+"The project details: \(projectDetails)" = "";
+
+/* No comment provided by engineer. */
+"The project list summary: \(projectListSummary)" = "";
+
+/* No comment provided by engineer. */
+"Unable to parse request components: %@" = "";
+
+/* No comment provided by engineer. */
+"User is Unauthorized: %@" = "";
+
+/* No comment provided by engineer. */
+"User not authorized for this request: %d" = "";
+
+/* No comment provided by engineer. */
+"User not authorized for this request: \(httpResponse.statusCode)" = "";
+
+/* No comment provided by engineer. */
+"User required authentication: %d" = "";
+
+/* No comment provided by engineer. */
+"User requires authentication: %@" = "";
+
+/* No comment provided by engineer. */
+"User requires authentication: \(authErrorResponse.message)" = "";
