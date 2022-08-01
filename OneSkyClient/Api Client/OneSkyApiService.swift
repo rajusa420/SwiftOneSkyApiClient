@@ -24,6 +24,18 @@ class OneSkyApiService {
         return try await instance.apiClient.post(path, body: body, queryItems: queryItems, contentType: contentType)
     }
     
+    static func post<ResponseBodyType: Decodable>(
+        _ path: String,
+        multipartFormRequestData: MultipartFormRequestData,
+        queryItems: [URLQueryItem]?
+    ) async throws -> ResponseBodyType {
+        return try await instance.apiClient.post(
+            path,
+            multipartFormRequestData: multipartFormRequestData,
+            queryItems: queryItems
+        )
+    }
+    
     static func delete<ResponseBodyType: Decodable>(_ path: String, queryItems: [URLQueryItem]?) async throws -> ResponseBodyType {
         return try await instance.apiClient.delete(path, queryItems: queryItems)
     }

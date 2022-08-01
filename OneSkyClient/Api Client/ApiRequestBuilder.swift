@@ -11,6 +11,7 @@ public enum APIHeaderField: String {
     case acceptType = "Accept"
     case contentType = "Content-Type"
     case contentLength = "Content-Length"
+    case contentDisposition = "Content-Disposition"
     case authorization = "Authorization"
 }
 
@@ -38,6 +39,7 @@ class APIRequestBuilder {
     private var authToken: String?
     private var headerFields: [APIHeaderField: String] = [:]
     private let timeOutInterval: TimeInterval = 30
+    private var formData: MultipartFormRequestData?
     
     init(method: APIRequestMethod, baseUrl: String, path: String) {
         self.method = method
@@ -51,6 +53,11 @@ class APIRequestBuilder {
         }
         
         return self
+    }
+    
+    func addFormData(_ formData: MultipartFormRequestData) -> APIRequestBuilder {
+        self.formData = formData
+        return addHeaderField(.contentDisposition, value: "form-data; name=\"\(formData.name)\"")
     }
     
     func addAuthToken(_ token: String?) -> APIRequestBuilder {
@@ -80,8 +87,13 @@ class APIRequestBuilder {
         return self
     }
     
-    func addHeaderField(_ apiHeaderField: APIHeaderField, contentType: ContentType) -> APIRequestBuilder {
-        headerFields[apiHeaderField] = contentType.rawValue
+    func addHeaderField(_ apiHeaderField: APIHeaderField, contentType: ContentType, boundary: String? = nil) -> APIRequestBuilder {
+        if let boundary = boundary {
+            headerFields[apiHeaderField] = "\(contentType.rawValue); boundary=\(boundary)"
+        } else {
+            headerFields[apiHeaderField] = contentType.rawValue
+        }
+        
         return self
     }
     
@@ -104,13 +116,20 @@ class APIRequestBuilder {
         request.timeoutInterval = timeOutInterval
         request.httpMethod = method.rawValue
         
-        if let body = body {
+        if let httpBody = formData?.getHttpBody() {
+            request.httpBody = httpBody
+            request.addValue("\(httpBody.count)", forHTTPHeaderField: .contentLength)
+        } else if let body = body {
             request.httpBody = body
             request.addValue("\(body.count)", forHTTPHeaderField: .contentLength)
         }
         
         if let authToken = authToken {
             request.addValue("token \(authToken)", forHTTPHeaderField: .authorization)
+        }
+        
+        headerFields.forEach { headerField, value in
+            request.addValue(value, forHTTPHeaderField: headerField)
         }
         
         return request

@@ -93,7 +93,15 @@ struct MainCommandLineInterface: AsyncParsableCommand {
             apiSecret: try OneSkySecretKeyHelper.getApiSecret()
         )
 
-        let taskSequence = buildTasksFromCommandLineArguments()
+//        let taskSequence = buildTasksFromCommandLineArguments()
+        let taskSequence = TaskSequence()
+        taskSequence.addProjectStringFileUploadTask(
+            projectId: "387918",
+            fileFormat: .iOSStrings,
+            localeCode: .en,
+            filePath: URL(fileURLWithPath: "/Users/rajusa/Rajusa/OneSkyApiClient/OneSkyClient/en.lproj/Localizable.strings", isDirectory: false, relativeTo: nil)
+        )
+        
         do {
             try await TaskSequenceExecutor().executeTasks(taskSequence: taskSequence)
         } catch {

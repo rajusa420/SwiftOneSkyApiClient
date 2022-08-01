@@ -36,6 +36,18 @@ class OneSkyApiClient: ApiClient {
         return try await super.post(path, body: body, queryItems: addAuthQueryParams(to: queryItems), contentType: contentType)
     }
     
+    override func post<ResponseBodyType: Decodable>(
+        _ path: String,
+        multipartFormRequestData: MultipartFormRequestData,
+        queryItems: [URLQueryItem]?
+    ) async throws -> ResponseBodyType {
+        return try await super.post(
+            path,
+            multipartFormRequestData: multipartFormRequestData,
+            queryItems: addAuthQueryParams(to: queryItems)
+        )
+    }
+    
     override func delete<ResponseBodyType: Decodable>(_ path: String, queryItems: [URLQueryItem]?) async throws -> ResponseBodyType {
         return try await super.delete(path, queryItems: addAuthQueryParams(to: queryItems))
     }

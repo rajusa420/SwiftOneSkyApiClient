@@ -56,9 +56,47 @@ open class ProjectRemoteDataSource {
     }
     
     public static func deleteProject(projectId: String) async throws {
-        let _: EmptyResponseBody = try await OneSkyApiService.delete(
-            OneSkyUrls.getProjectDetailsPath(forProjectId: projectId),
-            queryItems: nil
-        )
+        let _: EmptyResponseBody = try await OneSkyApiService
+            .delete(
+                OneSkyUrls.getProjectDetailsPath(forProjectId: projectId),
+                queryItems: nil
+            )
+    }
+    
+    public static func uploadTranslationFile(
+        projectId: String,
+        fileFormat: ProjectFileFormat,
+        localeCode: LocaleCode,
+        filePath: URL
+    ) async throws -> StringFileUploadSummaryDataModel {
+        // TODO: Don't know why this is failing?
+//        guard FileManager.default.fileExists(atPath: filePath.absoluteString) else {
+//            throw APIError.invalidUploadFilePath(message: filePath.absoluteString)
+//        }
+        
+        let fileData = try Data(contentsOf: filePath)
+        guard fileData.count > 0 else {
+            throw APIError.invalidUploadFile(message: filePath.absoluteString)
+        }
+        
+        
+        let queryItems: [URLQueryItem] = [
+            URLQueryItem(name: "file", value: filePath.lastPathComponent),
+            URLQueryItem(name: "file_format", value: fileFormat.rawValue),
+            // URLQueryItem(name: "locale", value: localeCode.code)
+        ]
+        
+        let response: ProjectFileUploadResponseModel = try await OneSkyApiService
+            .post(
+                OneSkyUrls.getStringFilesPath(forProjectId: projectId),
+                multipartFormRequestData: MultipartFormRequestData(
+                    filename: filePath.lastPathComponent,
+                    mimeType: "text/plain",
+                    data: fileData
+                ),
+                queryItems: queryItems
+            )
+        
+        return response.data
     }
 }

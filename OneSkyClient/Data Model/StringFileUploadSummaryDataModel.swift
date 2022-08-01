@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StringFileUploadSummaryDataModel: Codable {
+public struct StringFileUploadSummaryDataModel: Codable {
     enum CodingKeys: String, CodingKey {
         case name
         case format

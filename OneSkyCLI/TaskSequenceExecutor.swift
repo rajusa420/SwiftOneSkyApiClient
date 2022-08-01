@@ -12,12 +12,19 @@ enum OneSkyTask {
     case projectList(projectGroupId: String)
     case projectUpdate(projectId: String, name: String?, description: String?)
     case projectDetails(projectId: String)
+    case projectStringFileUpload(
+        projectId: String,
+        fileFormat: ProjectFileFormat,
+        localeCode: LocaleCode,
+        filePath: URL
+    )
 }
 
 enum TaskResult {
     case emptyResult
     case projectListResult(projectListSummary: [ProjectSummaryDataModel])
     case projectDetailsResult(projectDetails: ProjectDetailsDataModel)
+    case projectStringFileUploadResult(uploadResult: StringFileUploadSummaryDataModel)
 }
 
 class TaskSequence: AsyncSequence, AsyncIteratorProtocol {
@@ -36,12 +43,45 @@ class TaskSequence: AsyncSequence, AsyncIteratorProtocol {
     func executeTask(task: OneSkyTask) async throws -> Element {
         switch task {
         case .projectList(let projectGroupId):
-            return .projectListResult(projectListSummary: try await ProjectRemoteDataSource.getProjectList(forProjectGroupId: projectGroupId))
-        case .projectUpdate(let projectId, let name, let description):
-            try await ProjectRemoteDataSource.updateProject(projectId: projectId, name: name, description: description)
+            return .projectListResult(
+                projectListSummary: try await ProjectRemoteDataSource.getProjectList(
+                    forProjectGroupId: projectGroupId
+                )
+            )
+            
+        case .projectUpdate(
+            let projectId,
+            let name,
+            let description
+        ):
+            try await ProjectRemoteDataSource.updateProject(
+                projectId: projectId,
+                name: name,
+                description: description
+            )
             return .emptyResult
+            
         case .projectDetails(let projectId):
-            return .projectDetailsResult(projectDetails: try await ProjectRemoteDataSource.getDetails(forProjectId: projectId))
+            return .projectDetailsResult(
+                projectDetails: try await ProjectRemoteDataSource.getDetails(
+                    forProjectId: projectId
+                )
+            )
+            
+        case .projectStringFileUpload(
+            let projectId,
+            let fileFormat,
+            let localeCode,
+            let filePath
+        ):
+            return .projectStringFileUploadResult(
+                uploadResult: try await ProjectRemoteDataSource.uploadTranslationFile(
+                    projectId: projectId,
+                    fileFormat: fileFormat,
+                    localeCode: localeCode,
+                    filePath: filePath
+                )
+            )
         }
     }
     
@@ -59,6 +99,22 @@ class TaskSequence: AsyncSequence, AsyncIteratorProtocol {
     
     func addProjectListTask(projectGroupId: String) {
         taskList.append(.projectList(projectGroupId: projectGroupId))
+    }
+    
+    func addProjectStringFileUploadTask(
+        projectId: String,
+        fileFormat: ProjectFileFormat,
+        localeCode: LocaleCode,
+        filePath: URL
+    ) {
+        taskList.append(
+            .projectStringFileUpload(
+                projectId: projectId,
+                fileFormat: fileFormat,
+                localeCode: localeCode,
+                filePath: filePath
+            )
+        )
     }
 }
 
@@ -81,6 +137,8 @@ class TaskSequenceExecutor {
             print(NSLocalizedString("The project list summary: \(projectListSummary)", comment: "").greenColored)
         case .projectDetailsResult(let projectDetails):
             print(NSLocalizedString("The project details: \(projectDetails)", comment: "").cyanColored)
+        case .projectStringFileUploadResult(let uploadSummary):
+            print(NSLocalizedString("Upload Successful: Summary - \(uploadSummary)", comment: "").cyanColored)
         }
     }
 }

@@ -26,6 +26,8 @@ public enum APIError: Error {
     case decodingError(message: String)
     case badRequest(message: String)
     case requestComponentsParseError(message: String)
+    case invalidUploadFilePath(message: String)
+    case invalidUploadFile(message: String)
 }
 
 extension APIError: LocalizedError {
@@ -47,13 +49,10 @@ extension APIError: LocalizedError {
                 return String(format: NSLocalizedString("Bad request: %@", comment: ""), message)
             case .requestComponentsParseError(let message):
                 return String(format: NSLocalizedString("Unable to parse request components: %@", comment: ""), message)
+            case .invalidUploadFilePath(let message):
+                return String(format: NSLocalizedString("Unable to find upload file: %@", comment: ""), message)
+            case .invalidUploadFile(let message):
+                return String(format: NSLocalizedString("Failed to load upload file: %@", comment: ""), message)
         }
     }
-}
-
-public enum APIRequestMethod: String {
-    case get = "GET"
-    case put = "PUT"
-    case post = "POST"
-    case delete = "DELETE"
 }

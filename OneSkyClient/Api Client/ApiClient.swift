@@ -18,12 +18,33 @@ class ApiClient {
         self.baseURL = baseURL
     }
     
-    func buildRequest(_ path: String, _ requestMethod: APIRequestMethod, body: Data? = nil, queryItems: [URLQueryItem]? = nil, contentType: ContentType = .applicationJson) async throws -> URLRequest {
+    func buildRequest(
+        _ path: String,
+        _ requestMethod: APIRequestMethod,
+        body: Data? = nil,
+        queryItems: [URLQueryItem]? = nil,
+        contentType: ContentType = .applicationJson
+    ) async throws -> URLRequest {
         try await APIRequestBuilder(method: requestMethod, baseUrl: baseURL, path: path)
             .addQueryParams(queryItems)
             .addHeaderField(.contentType, contentType: contentType)
             .addHeaderField(.acceptType, contentType: .applicationJson)
             .addBody(body)
+            .build()
+    }
+    
+    func buildRequest(
+        _ path: String,
+        _ requestMethod: APIRequestMethod,
+        formData: MultipartFormRequestData,
+        queryItems: [URLQueryItem]? = nil,
+        contentType: ContentType = .multipartFormData
+    ) async throws -> URLRequest {
+        try await APIRequestBuilder(method: requestMethod, baseUrl: baseURL, path: path)
+            .addQueryParams(queryItems)
+            .addHeaderField(.contentType, contentType: contentType, boundary: formData.boundary)
+            .addHeaderField(.acceptType, contentType: .applicationJson)
+            .addFormData(formData)
             .build()
     }
     
@@ -45,6 +66,17 @@ class ApiClient {
     func post<RequestBodyType: Codable, ResponseBodyType: Decodable>(_ path: String, body: RequestBodyType?, queryItems: [URLQueryItem]?, contentType: ContentType = .applicationJson) async throws -> ResponseBodyType {
         let encodedBody = try await encodeBody(body)
         let request = try await buildRequest(path, .post, body: encodedBody, queryItems: queryItems, contentType: contentType)
+        let data = try await executeRequest(request)
+        let decodedData: ResponseBodyType = try await decodeResponse(data: data)
+        return decodedData
+    }
+    
+    func post<ResponseBodyType: Decodable>(
+        _ path: String,
+        multipartFormRequestData: MultipartFormRequestData,
+        queryItems: [URLQueryItem]?
+    ) async throws -> ResponseBodyType {
+        let request = try await buildRequest(path, .post, formData: multipartFormRequestData, queryItems: queryItems)
         let data = try await executeRequest(request)
         let decodedData: ResponseBodyType = try await decodeResponse(data: data)
         return decodedData
