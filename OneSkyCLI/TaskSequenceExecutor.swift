@@ -75,7 +75,7 @@ class TaskSequence: AsyncSequence, AsyncIteratorProtocol {
             let filePath
         ):
             return .projectStringFileUploadResult(
-                uploadResult: try await ProjectRemoteDataSource.uploadTranslationFile(
+                uploadResult: try await StringFileRemoteDataSource.uploadFile(
                     projectId: projectId,
                     fileFormat: fileFormat,
                     localeCode: localeCode,

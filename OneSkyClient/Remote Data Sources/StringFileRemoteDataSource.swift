@@ -13,7 +13,39 @@ open class StringFileRemoteDataSource {
         return response.data
     }
     
-    public static func uploadFile(forProjectId projectId: String, fileName: String, fileFormat: String, locale: LocaleFileFormat) {
+    public static func uploadFile(
+        projectId: String,
+        fileFormat: ProjectFileFormat,
+        localeCode: LocaleCode,
+        filePath: URL
+    ) async throws -> StringFileUploadSummaryDataModel {
+        // TODO: Don't know why this is failing?
+//        guard FileManager.default.fileExists(atPath: filePath.absoluteString) else {
+//            throw APIError.invalidUploadFilePath(message: filePath.absoluteString)
+//        }
         
+        let fileData = try Data(contentsOf: filePath)
+        guard fileData.count > 0 else {
+            throw APIError.invalidUploadFile(message: filePath.absoluteString)
+        }
+        
+        let queryItems: [URLQueryItem] = [
+            URLQueryItem(name: .fileFormat, value: fileFormat.rawValue),
+            URLQueryItem(name: .locale, value: localeCode.code),
+            URLQueryItem(name: .isKeepingAllString, value: "true")
+        ]
+        
+        let response: ProjectFileUploadResponseModel = try await OneSkyApiService
+            .post(
+                OneSkyUrls.getStringFilesPath(forProjectId: projectId),
+                multipartFormRequestData: MultipartFormRequestData(
+                    filename: filePath.lastPathComponent,
+                    mimeType: .octetStream,
+                    data: fileData
+                ),
+                queryItems: queryItems
+            )
+        
+        return response.data
     }
 }
