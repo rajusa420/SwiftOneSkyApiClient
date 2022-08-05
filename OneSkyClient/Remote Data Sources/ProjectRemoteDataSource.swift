@@ -79,11 +79,10 @@ open class ProjectRemoteDataSource {
             throw APIError.invalidUploadFile(message: filePath.absoluteString)
         }
         
-        
         let queryItems: [URLQueryItem] = [
-            URLQueryItem(name: "file", value: filePath.lastPathComponent),
             URLQueryItem(name: "file_format", value: fileFormat.rawValue),
-            // URLQueryItem(name: "locale", value: localeCode.code)
+            URLQueryItem(name: "locale", value: localeCode.code),
+            URLQueryItem(name: "is_keeping_all_string", value: "true")
         ]
         
         let response: ProjectFileUploadResponseModel = try await OneSkyApiService
@@ -91,7 +90,7 @@ open class ProjectRemoteDataSource {
                 OneSkyUrls.getStringFilesPath(forProjectId: projectId),
                 multipartFormRequestData: MultipartFormRequestData(
                     filename: filePath.lastPathComponent,
-                    mimeType: "text/plain",
+                    mimeType: "application/octet-stream",
                     data: fileData
                 ),
                 queryItems: queryItems

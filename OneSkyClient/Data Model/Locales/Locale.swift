@@ -37,7 +37,7 @@ extension LocaleCode {
         case .de:
             return "de"
         case .en:
-            return "en"
+            return "en-US"
         case .enGB:
             return "en-GB"
         case .enIN:

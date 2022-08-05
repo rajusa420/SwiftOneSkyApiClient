@@ -99,7 +99,7 @@ struct MainCommandLineInterface: AsyncParsableCommand {
             projectId: "387918",
             fileFormat: .iOSStrings,
             localeCode: .en,
-            filePath: URL(fileURLWithPath: "/Users/rajusa/Rajusa/OneSkyApiClient/OneSkyClient/en.lproj/Localizable.strings", isDirectory: false, relativeTo: nil)
+            filePath: URL(fileURLWithPath: "/Users/rajusa/Rajusa/OneSkyApiClient/OneSkyCLI/en.lproj/Localizable.strings", isDirectory: false, relativeTo: nil)
         )
         
         do {

@@ -8,7 +8,7 @@
 import Foundation
 
 public struct MultipartFormRequestData {
-    let name = "files"
+    let name = "file"
     let filename: String
     let mimeType: String
     let data: Data?
@@ -26,6 +26,7 @@ public struct MultipartFormRequestData {
         httpBody.append("\r\n")
         httpBody.append(data)
         httpBody.append("\r\n")
+        httpBody.append("--\(boundary)--")
         return httpBody
     }
 }
