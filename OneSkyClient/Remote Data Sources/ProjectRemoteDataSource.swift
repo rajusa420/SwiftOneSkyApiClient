@@ -24,13 +24,13 @@ open class ProjectRemoteDataSource {
     }
     
     public static func createProject(inProjectGroupId projectGroupId: String, projectType: ProjectTypeCode, name: String?, description: String?) async throws -> ProjectCreateSummaryDataModel {
-        var queryItems: [URLQueryItem] = [URLQueryItem(name: "project_type", value: projectType.rawValue)]
+        var queryItems: [URLQueryItem] = [URLQueryItem(name: .projectType, value: projectType.rawValue)]
         if let name = name {
-            queryItems.append(URLQueryItem(name: "name", value: name))
+            queryItems.append(URLQueryItem(name: .name, value: name))
         }
         
         if let description = description {
-            queryItems.append(URLQueryItem(name: "description", value: description))
+            queryItems.append(URLQueryItem(name: .description, value: description))
         }
         
         let response: ProjectCreateResponseModel = try await OneSkyApiService.post(
@@ -44,8 +44,8 @@ open class ProjectRemoteDataSource {
     
     public static func updateProject(projectId: String, name: String?, description: String?) async throws {
         let queryItems: [URLQueryItem] = [
-            URLQueryItem(name: "name", value: name),
-            URLQueryItem(name: "description", value: description)
+            URLQueryItem(name: .name, value: name),
+            URLQueryItem(name: .description, value: description)
         ]
         
         let _: EmptyResponseBody = try await OneSkyApiService.put(
@@ -80,9 +80,9 @@ open class ProjectRemoteDataSource {
         }
         
         let queryItems: [URLQueryItem] = [
-            URLQueryItem(name: "file_format", value: fileFormat.rawValue),
-            URLQueryItem(name: "locale", value: localeCode.code),
-            URLQueryItem(name: "is_keeping_all_string", value: "true")
+            URLQueryItem(name: .fileFormat, value: fileFormat.rawValue),
+            URLQueryItem(name: .locale, value: localeCode.code),
+            URLQueryItem(name: .isKeepingAllString, value: "true")
         ]
         
         let response: ProjectFileUploadResponseModel = try await OneSkyApiService
@@ -90,7 +90,7 @@ open class ProjectRemoteDataSource {
                 OneSkyUrls.getStringFilesPath(forProjectId: projectId),
                 multipartFormRequestData: MultipartFormRequestData(
                     filename: filePath.lastPathComponent,
-                    mimeType: "application/octet-stream",
+                    mimeType: .octetStream,
                     data: fileData
                 ),
                 queryItems: queryItems

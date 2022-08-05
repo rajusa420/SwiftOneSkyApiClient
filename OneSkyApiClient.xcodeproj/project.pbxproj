@@ -65,6 +65,7 @@
 		1EA7605128611B8A000BD4A9 /* TaskSequenceExecutor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7605028611B8A000BD4A9 /* TaskSequenceExecutor.swift */; };
 		1EA7605428613D8D000BD4A9 /* ANSIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7605328613D8D000BD4A9 /* ANSIColor.swift */; };
 		1EA7605628613F02000BD4A9 /* String+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7605528613F02000BD4A9 /* String+Color.swift */; };
+		1EC5D293289D9E120011310C /* OneSkyApiQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC5D292289D9E120011310C /* OneSkyApiQueryParams.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +166,7 @@
 		1EA7605028611B8A000BD4A9 /* TaskSequenceExecutor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSequenceExecutor.swift; sourceTree = "<group>"; };
 		1EA7605328613D8D000BD4A9 /* ANSIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANSIColor.swift; sourceTree = "<group>"; };
 		1EA7605528613F02000BD4A9 /* String+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Color.swift"; sourceTree = "<group>"; };
+		1EC5D292289D9E120011310C /* OneSkyApiQueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSkyApiQueryParams.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				1E5197F1283A6D78007C5A10 /* ApiClient.swift */,
 				1E993D2B2898732E0053D5F9 /* MultipartFormRequestData.swift */,
 				1E5197F3283A6D94007C5A10 /* OneSkyApiClient.swift */,
+				1EC5D292289D9E120011310C /* OneSkyApiQueryParams.swift */,
 				1E519800283C0F81007C5A10 /* OneSkyApiService.swift */,
 			);
 			path = "Api Client";
@@ -518,6 +521,7 @@
 				1E993D2828986D7A0053D5F9 /* ApiRequestMethod.swift in Sources */,
 				1E5198592843F43B007C5A10 /* StringFileRemoteDataSource.swift in Sources */,
 				1E1E9CDF284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift in Sources */,
+				1EC5D293289D9E120011310C /* OneSkyApiQueryParams.swift in Sources */,
 				1E5198612843F452007C5A10 /* AuthorizationErrorMetaModel.swift in Sources */,
 				1E5198722843F47A007C5A10 /* MD5Helper.swift in Sources */,
 				1E51986B2843F465007C5A10 /* ProjectLanguageDataModel.swift in Sources */,

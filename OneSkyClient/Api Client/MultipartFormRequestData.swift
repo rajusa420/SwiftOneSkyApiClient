@@ -7,10 +7,14 @@
 
 import Foundation
 
+public enum MultipartForRequestMimeType: String {
+    case octetStream = "application/octet-stream"
+}
+
 public struct MultipartFormRequestData {
     let name = "file"
     let filename: String
-    let mimeType: String
+    let mimeType: MultipartForRequestMimeType
     let data: Data?
     let boundary = UUID().uuidString
     
@@ -22,7 +26,7 @@ public struct MultipartFormRequestData {
         var httpBody = Data()
         httpBody.append("--\(boundary)\r\n")
         httpBody.append("Content-Disposition: form-data; name=\"\(name)\"; filename=\"\(filename)\"\r\n")
-        httpBody.append("Content-Type: \(mimeType)\r\n")
+        httpBody.append("Content-Type: \(mimeType.rawValue)\r\n")
         httpBody.append("\r\n")
         httpBody.append(data)
         httpBody.append("\r\n")
