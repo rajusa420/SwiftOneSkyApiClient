@@ -17,6 +17,7 @@
 		1E1E9CDD284CE20C002E0E87 /* ProjectCreateResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CDC284CE20C002E0E87 /* ProjectCreateResponseModel.swift */; };
 		1E1E9CDF284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CDE284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift */; };
 		1E1E9CE1284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CE0284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift */; };
+		1E2E7FA628A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E7FA528A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift */; };
 		1E5197E1283551AD007C5A10 /* MainCommandLineInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E0283551AD007C5A10 /* MainCommandLineInterface.swift */; };
 		1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EE283A6976007C5A10 /* SecretKeyManager.swift */; };
 		1E51984E2843F3C3007C5A10 /* OneSkyApiClientFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */; };
@@ -66,6 +67,7 @@
 		1EA7605428613D8D000BD4A9 /* ANSIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7605328613D8D000BD4A9 /* ANSIColor.swift */; };
 		1EA7605628613F02000BD4A9 /* String+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA7605528613F02000BD4A9 /* String+Color.swift */; };
 		1EC5D293289D9E120011310C /* OneSkyApiQueryParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC5D292289D9E120011310C /* OneSkyApiQueryParams.swift */; };
+		1EC5D295289DB7480011310C /* TranslationsRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC5D294289DB7480011310C /* TranslationsRemoteDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,7 @@
 		1E1E9CDC284CE20C002E0E87 /* ProjectCreateResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreateResponseModel.swift; sourceTree = "<group>"; };
 		1E1E9CDE284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreateResponseMetaModel.swift; sourceTree = "<group>"; };
 		1E1E9CE0284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreateSummaryDataModel.swift; sourceTree = "<group>"; };
+		1E2E7FA528A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationFileDownloadSummaryModel.swift; sourceTree = "<group>"; };
 		1E5197E0283551AD007C5A10 /* MainCommandLineInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCommandLineInterface.swift; sourceTree = "<group>"; };
 		1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBuilder.swift; sourceTree = "<group>"; };
 		1E5197EA28355638007C5A10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 		1EA7605328613D8D000BD4A9 /* ANSIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANSIColor.swift; sourceTree = "<group>"; };
 		1EA7605528613F02000BD4A9 /* String+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Color.swift"; sourceTree = "<group>"; };
 		1EC5D292289D9E120011310C /* OneSkyApiQueryParams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneSkyApiQueryParams.swift; sourceTree = "<group>"; };
+		1EC5D294289DB7480011310C /* TranslationsRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationsRemoteDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,7 @@
 				1E5198392840AF1B007C5A10 /* ProjectFileImportSummaryDataModel.swift */,
 				1E1E9CD228442588002E0E87 /* ProjectFileDeleteSummaryDataModel.swift */,
 				1E1E9CD8284427B9002E0E87 /* StringFileUploadSummaryDataModel.swift */,
+				1E2E7FA528A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift */,
 				1E1E9CE0284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift */,
 				1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */,
 				1E51983D2840B2EE007C5A10 /* LocaleSummaryDataModel.swift */,
@@ -282,6 +287,7 @@
 				1E519808283CA248007C5A10 /* ProjectGroupRemoteDataSource.swift */,
 				1E519815283D4E74007C5A10 /* ProjectRemoteDataSource.swift */,
 				1E51981D283FBA2D007C5A10 /* StringFileRemoteDataSource.swift */,
+				1EC5D294289DB7480011310C /* TranslationsRemoteDataSource.swift */,
 				1E51983F2840F49F007C5A10 /* LocaleRemoteDataSource.swift */,
 			);
 			path = "Remote Data Sources";
@@ -414,7 +420,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1330;
-				LastUpgradeCheck = 1330;
+				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					1E5197DC283551AD007C5A10 = {
 						CreatedOnToolsVersion = 13.3.1;
@@ -497,6 +503,7 @@
 				1E5198732843F47A007C5A10 /* OneSkyAuthHelpers.swift in Sources */,
 				1E1E9CD52844269B002E0E87 /* ProjectFileDeleteResponseMetaModel.swift in Sources */,
 				1E1E9CDB284CE10C002E0E87 /* ProjectTypeDataModel.swift in Sources */,
+				1E2E7FA628A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift in Sources */,
 				1E6274232895DAF500447471 /* Locale.swift in Sources */,
 				1E51986D2843F465007C5A10 /* ProjectFileDataModel.swift in Sources */,
 				1E51986F2843F465007C5A10 /* ProjectFileFormat.swift in Sources */,
@@ -506,6 +513,7 @@
 				1E5198662843F45C007C5A10 /* ProjectFileUploadResponseModel.swift in Sources */,
 				1E5198672843F45C007C5A10 /* ProjectListResponseModel.swift in Sources */,
 				1E1E9CD7284426F2002E0E87 /* ProjectFileDeleteResponseModel.swift in Sources */,
+				1EC5D295289DB7480011310C /* TranslationsRemoteDataSource.swift in Sources */,
 				1E993D2C2898732E0053D5F9 /* MultipartFormRequestData.swift in Sources */,
 				1EA7604F286112DE000BD4A9 /* LocaleFileFormat.swift in Sources */,
 				1E51985F2843F452007C5A10 /* ProjectFileUploadMetaModel.swift in Sources */,
@@ -568,6 +576,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -628,6 +637,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -680,6 +690,7 @@
 		1E5197E5283551AD007C5A10 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57FB56R42B;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -692,6 +703,7 @@
 		1E5197E6283551AD007C5A10 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57FB56R42B;
 				ENABLE_HARDENED_RUNTIME = YES;

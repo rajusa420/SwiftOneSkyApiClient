@@ -49,16 +49,20 @@ class ApiClient {
     }
     
     func get<ResponseBodyType: Decodable>(_ path: String, queryItems: [URLQueryItem]? = nil) async throws -> ResponseBodyType {
-        let request = try await buildRequest(path, .get, queryItems: queryItems)
-        let data = try await executeRequest(request)
+        let (_, data) = try await getData(path, queryItems: queryItems)
         let decodedData: ResponseBodyType = try await decodeResponse(data: data)
         return decodedData
+    }
+    
+    func getData(_ path: String, queryItems: [URLQueryItem]? = nil) async throws -> (Int, Data) {
+        let request = try await buildRequest(path, .get, queryItems: queryItems)
+        return try await executeRequest(request)
     }
     
     func put<RequestBodyType: Codable, ResponseBodyType: Decodable>(_ path: String, body: RequestBodyType?, queryItems: [URLQueryItem]? = nil) async throws -> ResponseBodyType {
         let encodedBody = try await encodeBody(body)
         let request = try await buildRequest(path, .put, body: encodedBody, queryItems: queryItems)
-        let data = try await executeRequest(request)
+        let (_, data) = try await executeRequest(request)
         let decodedData: ResponseBodyType = try await decodeResponse(data: data)
         return decodedData
     }
@@ -66,7 +70,7 @@ class ApiClient {
     func post<RequestBodyType: Codable, ResponseBodyType: Decodable>(_ path: String, body: RequestBodyType?, queryItems: [URLQueryItem]?, contentType: ContentType = .applicationJson) async throws -> ResponseBodyType {
         let encodedBody = try await encodeBody(body)
         let request = try await buildRequest(path, .post, body: encodedBody, queryItems: queryItems, contentType: contentType)
-        let data = try await executeRequest(request)
+        let (_, data) = try await executeRequest(request)
         let decodedData: ResponseBodyType = try await decodeResponse(data: data)
         return decodedData
     }
@@ -77,14 +81,14 @@ class ApiClient {
         queryItems: [URLQueryItem]?
     ) async throws -> ResponseBodyType {
         let request = try await buildRequest(path, .post, formData: multipartFormRequestData, queryItems: queryItems)
-        let data = try await executeRequest(request)
+        let (_, data) = try await executeRequest(request)
         let decodedData: ResponseBodyType = try await decodeResponse(data: data)
         return decodedData
     }
     
     func delete<ResponseBodyType: Decodable>(_ path: String, queryItems: [URLQueryItem]?) async throws -> ResponseBodyType {
         let request = try await buildRequest(path, .delete, queryItems: queryItems)
-        let data = try await executeRequest(request)
+        let (_, data) = try await executeRequest(request)
         let decodedData: ResponseBodyType = try await decodeResponse(data: data)
         return decodedData
     }
@@ -130,10 +134,11 @@ class ApiClient {
         return response
     }
     
-    func handleResponse(data: Data, httpResponse: HTTPURLResponse) async throws -> Data {
-        switch httpResponse.statusCode {
+    func handleResponse(data: Data, httpResponse: HTTPURLResponse) async throws -> (Int, Data) {
+        let statusCode = httpResponse.statusCode
+        switch statusCode {
             case 200 ..< 300:
-                return data
+                return (statusCode, data)
     
             case 401:
                 throw APIError.needsAuthentication(message: String(format: NSLocalizedString("User required authentication: %d", comment: ""), httpResponse.statusCode))
@@ -146,7 +151,7 @@ class ApiClient {
         }
     }
     
-    private func executeRequest(_ urlRequest: URLRequest) async throws -> Data {
+    private func executeRequest(_ urlRequest: URLRequest) async throws -> (Int, Data) {
         print("Execute Request: \(urlRequest.url?.absoluteString ?? "n/a")")
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         

@@ -16,6 +16,10 @@ class OneSkyApiService {
         return try await instance.apiClient.get(path, queryItems: queryItems)
     }
     
+    static func getData(_ path: String, queryItems: [URLQueryItem]? = nil) async throws -> (Int, Data) {
+        return try await instance.apiClient.getData(path, queryItems: queryItems)
+    }
+    
     static func put<RequestBodyType: Codable, ResponseBodyType: Decodable>(_ path: String, body: RequestBodyType?, queryItems: [URLQueryItem]? = nil) async throws -> ResponseBodyType {
         return try await instance.apiClient.put(path, body: body, queryItems: queryItems)
     }

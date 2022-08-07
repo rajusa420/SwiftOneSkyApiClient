@@ -28,6 +28,10 @@ class OneSkyApiClient: ApiClient {
         return try await super.get(path, queryItems: addAuthQueryParams(to: queryItems))
     }
     
+    override func getData(_ path: String, queryItems: [URLQueryItem]? = nil) async throws -> (Int, Data) {
+        return try await super.getData(path, queryItems: addAuthQueryParams(to: queryItems))
+    }
+    
     override func put<RequestBodyType: Codable, ResponseBodyType: Decodable>(_ path: String, body: RequestBodyType?, queryItems: [URLQueryItem]? = nil) async throws -> ResponseBodyType {
         return try await super.put(path, body: body, queryItems: addAuthQueryParams(to: queryItems))
     }
@@ -52,10 +56,11 @@ class OneSkyApiClient: ApiClient {
         return try await super.delete(path, queryItems: addAuthQueryParams(to: queryItems))
     }
     
-    override func handleResponse(data: Data, httpResponse: HTTPURLResponse) async throws -> Data {
-        switch httpResponse.statusCode {
+    override func handleResponse(data: Data, httpResponse: HTTPURLResponse) async throws -> (Int, Data) {
+        let statusCode = httpResponse.statusCode
+        switch statusCode {
             case 200 ..< 300:
-                return data
+                return (statusCode, data)
     
             case 401:
                 let authErrorResponse: AuthorizationErrorResponseModel = try await decodeResponse(data: data)

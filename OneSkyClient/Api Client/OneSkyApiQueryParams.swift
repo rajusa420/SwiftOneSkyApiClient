@@ -14,6 +14,8 @@ public enum OneSkyApiQueryParam: String {
     case fileFormat = "file_format"
     case locale = "locale"
     case isKeepingAllString = "is_keeping_all_string"
+    case sourceFileName = "source_file_name"
+    case exportFileName = "export_file_name"
 }
 
 extension URLQueryItem {

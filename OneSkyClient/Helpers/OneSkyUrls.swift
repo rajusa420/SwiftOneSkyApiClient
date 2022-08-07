@@ -41,6 +41,10 @@ class OneSkyUrls {
         return "projects/\(projectId)/files"
     }
     
+    public static func getTranslationFilePath(forProjectId projectId: String) -> String {
+        return "projects/\(projectId)/translations"
+    }
+    
     public static func getLocaleListPath() -> String {
         return "locales"
     }
