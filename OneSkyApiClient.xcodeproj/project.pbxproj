@@ -18,6 +18,7 @@
 		1E1E9CDF284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CDE284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift */; };
 		1E1E9CE1284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CE0284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift */; };
 		1E2E7FA628A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E7FA528A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift */; };
+		1E2E7FA828A05B92009CAF8F /* TaskSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E7FA728A05B92009CAF8F /* TaskSequence.swift */; };
 		1E5197E1283551AD007C5A10 /* MainCommandLineInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E0283551AD007C5A10 /* MainCommandLineInterface.swift */; };
 		1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EE283A6976007C5A10 /* SecretKeyManager.swift */; };
 		1E51984E2843F3C3007C5A10 /* OneSkyApiClientFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */; };
@@ -115,6 +116,7 @@
 		1E1E9CDE284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreateResponseMetaModel.swift; sourceTree = "<group>"; };
 		1E1E9CE0284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreateSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E2E7FA528A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationFileDownloadSummaryModel.swift; sourceTree = "<group>"; };
+		1E2E7FA728A05B92009CAF8F /* TaskSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSequence.swift; sourceTree = "<group>"; };
 		1E5197E0283551AD007C5A10 /* MainCommandLineInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCommandLineInterface.swift; sourceTree = "<group>"; };
 		1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBuilder.swift; sourceTree = "<group>"; };
 		1E5197EA28355638007C5A10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				1E5197ED283A6941007C5A10 /* SecretKeyManager */,
 				1E5197E0283551AD007C5A10 /* MainCommandLineInterface.swift */,
 				1EA7605028611B8A000BD4A9 /* TaskSequenceExecutor.swift */,
+				1E2E7FA728A05B92009CAF8F /* TaskSequence.swift */,
 				1E6274192895CE3E00447471 /* Localizable.strings */,
 			);
 			path = OneSkyCLI;
@@ -472,6 +475,7 @@
 			files = (
 				1EA7605428613D8D000BD4A9 /* ANSIColor.swift in Sources */,
 				1EA7605128611B8A000BD4A9 /* TaskSequenceExecutor.swift in Sources */,
+				1E2E7FA828A05B92009CAF8F /* TaskSequence.swift in Sources */,
 				1EA7605628613F02000BD4A9 /* String+Color.swift in Sources */,
 				1E5197E1283551AD007C5A10 /* MainCommandLineInterface.swift in Sources */,
 				1E1E9CCE2843FDF4002E0E87 /* OneSkySecretKeyHelper.swift in Sources */,

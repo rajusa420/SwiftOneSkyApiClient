@@ -95,11 +95,21 @@ struct MainCommandLineInterface: AsyncParsableCommand {
 
 //        let taskSequence = buildTasksFromCommandLineArguments()
         let taskSequence = TaskSequence()
-        taskSequence.addProjectStringFileUploadTask(
+//        taskSequence.addProjectStringFileUploadTask(
+//            projectId: "387918",
+//            fileFormat: .iOSStrings,
+//            localeCode: .en,
+//            filePath: URL(fileURLWithPath: "/Users/rajusa/Rajusa/OneSkyApiClient/OneSkyCLI/en.lproj/Localizable.strings", isDirectory: false, relativeTo: nil)
+//        )
+        taskSequence.addProjectTranslationFileDownloadTask(
             projectId: "387918",
-            fileFormat: .iOSStrings,
             localeCode: .en,
-            filePath: URL(fileURLWithPath: "/Users/rajusa/Rajusa/OneSkyApiClient/OneSkyCLI/en.lproj/Localizable.strings", isDirectory: false, relativeTo: nil)
+            sourceFileName: "Localizable.strings",
+            exportFilePath: URL(
+                fileURLWithPath: "/Users/rajusa/Desktop/Localizable.strings",
+                isDirectory: false,
+                relativeTo: nil
+            )
         )
         
         do {
