@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct StringFileUploadSummaryDataModel: Codable {
+public struct StringFileUploadSummaryDataModel: Codable, DataModelSummaryProvider {
     enum CodingKeys: String, CodingKey {
         case name
         case format
@@ -19,4 +19,8 @@ public struct StringFileUploadSummaryDataModel: Codable {
     let format: String
     let language: LocaleSummaryDataModel
     let importSummary: ProjectFileImportSummaryDataModel
+    
+    public func getSummary() -> String {
+        return NSLocalizedString("Uploaded File - \(name) (\(language.english_name). (\(importSummary.created_at))", comment: "")
+    }
 }

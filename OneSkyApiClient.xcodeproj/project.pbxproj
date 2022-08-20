@@ -19,6 +19,7 @@
 		1E1E9CE1284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E1E9CE0284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift */; };
 		1E2E7FA628A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E7FA528A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift */; };
 		1E2E7FA828A05B92009CAF8F /* TaskSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E7FA728A05B92009CAF8F /* TaskSequence.swift */; };
+		1E2E7FAA28A06746009CAF8F /* DataModelSummaryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2E7FA928A06746009CAF8F /* DataModelSummaryProvider.swift */; };
 		1E5197E1283551AD007C5A10 /* MainCommandLineInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197E0283551AD007C5A10 /* MainCommandLineInterface.swift */; };
 		1E5197EF283A6976007C5A10 /* SecretKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E5197EE283A6976007C5A10 /* SecretKeyManager.swift */; };
 		1E51984E2843F3C3007C5A10 /* OneSkyApiClientFramework.docc in Sources */ = {isa = PBXBuildFile; fileRef = 1E51984D2843F3C3007C5A10 /* OneSkyApiClientFramework.docc */; };
@@ -117,6 +118,7 @@
 		1E1E9CE0284CE2EA002E0E87 /* ProjectCreateSummaryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCreateSummaryDataModel.swift; sourceTree = "<group>"; };
 		1E2E7FA528A054CB009CAF8F /* TranslationFileDownloadSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationFileDownloadSummaryModel.swift; sourceTree = "<group>"; };
 		1E2E7FA728A05B92009CAF8F /* TaskSequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskSequence.swift; sourceTree = "<group>"; };
+		1E2E7FA928A06746009CAF8F /* DataModelSummaryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModelSummaryProvider.swift; sourceTree = "<group>"; };
 		1E5197E0283551AD007C5A10 /* MainCommandLineInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCommandLineInterface.swift; sourceTree = "<group>"; };
 		1E5197E828355481007C5A10 /* ApiRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequestBuilder.swift; sourceTree = "<group>"; };
 		1E5197EA28355638007C5A10 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
@@ -253,6 +255,7 @@
 				1E51983B2840AF8F007C5A10 /* ProjectFileFormat.swift */,
 				1E51983D2840B2EE007C5A10 /* LocaleSummaryDataModel.swift */,
 				1EA7604E286112DE000BD4A9 /* LocaleFileFormat.swift */,
+				1E2E7FA928A06746009CAF8F /* DataModelSummaryProvider.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
@@ -535,6 +538,7 @@
 				1E1E9CDF284CE2AD002E0E87 /* ProjectCreateResponseMetaModel.swift in Sources */,
 				1EC5D293289D9E120011310C /* OneSkyApiQueryParams.swift in Sources */,
 				1E5198612843F452007C5A10 /* AuthorizationErrorMetaModel.swift in Sources */,
+				1E2E7FAA28A06746009CAF8F /* DataModelSummaryProvider.swift in Sources */,
 				1E5198722843F47A007C5A10 /* MD5Helper.swift in Sources */,
 				1E51986B2843F465007C5A10 /* ProjectLanguageDataModel.swift in Sources */,
 				1E5198572843F421007C5A10 /* ApiError.swift in Sources */,

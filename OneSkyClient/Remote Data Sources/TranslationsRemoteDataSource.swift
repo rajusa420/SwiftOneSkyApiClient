@@ -25,6 +25,8 @@ open class TranslationRemoteDataSource {
             queryItems: queryItems
         )
         
+        try data.write(to: exportFilePath)
+        
         let response: TranslationResponse
         switch statusCode {
         case 202:
@@ -32,7 +34,7 @@ open class TranslationRemoteDataSource {
         case 204:
             response = .noContent
         default:
-            response = .file(data: data)
+            response = .file(data: data, localeCode: localeCode)
         }
         
         return TranslationFileDownloadSummaryModel(response: response)

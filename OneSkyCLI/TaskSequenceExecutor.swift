@@ -26,11 +26,11 @@ class TaskSequenceExecutor {
         case .projectListResult(let projectListSummary):
             print(NSLocalizedString("The project list summary: \(projectListSummary)", comment: "").greenColored)
         case .projectDetailsResult(let projectDetails):
-            print(NSLocalizedString("The project details: \(projectDetails)", comment: "").cyanColored)
+            print(NSLocalizedString("The project details: \(projectDetails.getSummary())", comment: "").cyanColored)
         case .projectStringFileUploadResult(let uploadSummary):
-            print(NSLocalizedString("Upload Successful: Summary - \(uploadSummary)", comment: "").cyanColored)
+            print(NSLocalizedString("Upload Successful: Summary - \(uploadSummary.getSummary())", comment: "").cyanColored)
         case .projectTranslationFileDownloadResult(let downloadResult):
-            print(NSLocalizedString("Download Successful: \(downloadResult)", comment: "").cyanColored)
+            print(NSLocalizedString("Download Successful: \(downloadResult.getSummary())", comment: "").cyanColored)
         }
     }
 }
